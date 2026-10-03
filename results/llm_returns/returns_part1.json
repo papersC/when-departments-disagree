@@ -1,0 +1,73 @@
+{
+ "model": "claude-opus-5",
+ "interface": "session, no API key available in the execution environment",
+ "note": "returns are verbatim; each was produced from the corresponding prompt in prompts.json and from nothing else",
+ "returns": {
+  "S0053-HR": {"claims": [
+    {"claim_type": "training_requirement", "subject": "complete_security_training", "modality": "should", "conditions": [], "citations": ["A00188"], "confidence": 0.86},
+    {"claim_type": "access_provisioning", "subject": "grant_admin_rights", "modality": "fact", "conditions": [], "citations": ["A00408"], "confidence": 0.74},
+    {"claim_type": "access_provisioning", "subject": "issue_shared_credential", "modality": "fact", "conditions": [], "citations": ["A00416"], "confidence": 0.72}
+  ]},
+  "S0053-OPS": {"claims": [
+    {"claim_type": "service_continuity", "subject": "grant_remote_access", "modality": "must_not", "conditions": ["system_is_production"], "citations": ["A00382"], "confidence": 0.91},
+    {"claim_type": "access_provisioning", "subject": "complete_security_training", "modality": "fact", "conditions": ["access_is_privileged"], "citations": ["A00393"], "confidence": 0.78},
+    {"claim_type": "access_provisioning", "subject": "grant_admin_rights", "modality": "fact", "conditions": ["access_is_privileged"], "citations": ["A00397"], "confidence": 0.75},
+    {"claim_type": "access_provisioning", "subject": "issue_shared_credential", "modality": "fact", "conditions": [], "citations": ["A00405"], "confidence": 0.73}
+  ]},
+  "S0053-SEC": {"claims": [
+    {"claim_type": "access_provisioning", "subject": "complete_security_training", "modality": "should", "conditions": [], "citations": ["A00228"], "confidence": 0.88}
+  ]},
+  "S0330-FIN": {"claims": [
+    {"claim_type": "sanctions_screening", "subject": "notify_regulator", "modality": "fact", "conditions": ["supplier_is_sole_source"], "citations": ["A00621"], "confidence": 0.7}
+  ]},
+  "S0330-LEG": {"claims": []},
+  "S0330-OPS": {"claims": [
+    {"claim_type": "budget_approval", "subject": "obtain_two_approvals", "modality": "fact", "conditions": ["change_is_emergency"], "citations": ["A00456"], "confidence": 0.76},
+    {"claim_type": "budget_approval", "subject": "escalate_to_committee", "modality": "fact", "conditions": ["counterparty_is_new", "data_is_personal"], "citations": ["A00448"], "confidence": 0.74}
+  ]},
+  "S0207-FIN": {"claims": []},
+  "S0207-HR": {"claims": [
+    {"claim_type": "access_provisioning", "subject": "grant_remote_access", "modality": "fact", "conditions": ["asset_is_classified", "data_is_personal"], "citations": ["A00412"], "confidence": 0.77}
+  ]},
+  "S0207-OPS": {"claims": [
+    {"claim_type": "delivery_acceptance", "subject": "accept_partial_delivery", "modality": "should_not", "conditions": ["counterparty_is_new", "worker_is_contractor"], "citations": ["A00359"], "confidence": 0.89},
+    {"claim_type": "access_provisioning", "subject": "complete_security_training", "modality": "fact", "conditions": ["volume_is_high"], "citations": ["A00392"], "confidence": 0.72}
+  ]},
+  "S0207-SEC": {"claims": [
+    {"claim_type": "service_continuity", "subject": "schedule_night_shift", "modality": "fact", "conditions": [], "citations": ["A00666"], "confidence": 0.71}
+  ]},
+  "S0378-FIN": {"claims": [
+    {"claim_type": "vendor_onboarding", "subject": "onboard_single_source", "modality": "fact", "conditions": ["system_is_production"], "citations": ["A00694"], "confidence": 0.73},
+    {"claim_type": "vendor_onboarding", "subject": "obtain_two_approvals", "modality": "fact", "conditions": ["system_is_production"], "citations": ["A00689"], "confidence": 0.72}
+  ]},
+  "S0378-OPS": {"claims": [
+    {"claim_type": "budget_approval", "subject": "obtain_two_approvals", "modality": "fact", "conditions": ["contract_value_high"], "citations": ["A00455"], "confidence": 0.75}
+  ]},
+  "S0378-SEC": {"claims": [
+    {"claim_type": "vendor_onboarding", "subject": "onboard_single_source", "modality": "fact", "conditions": [], "citations": ["A00711"], "confidence": 0.74}
+  ]},
+  "S0299-HR": {"claims": [
+    {"claim_type": "access_provisioning", "subject": "grant_remote_access", "modality": "fact", "conditions": [], "citations": ["A00414"], "confidence": 0.76},
+    {"claim_type": "access_provisioning", "subject": "grant_admin_rights", "modality": "fact", "conditions": ["worker_is_contractor"], "citations": ["A00410"], "confidence": 0.75},
+    {"claim_type": "access_provisioning", "subject": "issue_shared_credential", "modality": "fact", "conditions": ["access_is_privileged"], "citations": ["A00418"], "confidence": 0.74}
+  ]},
+  "S0299-OPS": {"claims": [
+    {"claim_type": "service_continuity", "subject": "grant_remote_access", "modality": "must_not", "conditions": ["system_is_production"], "citations": ["A00387"], "confidence": 0.9},
+    {"claim_type": "access_provisioning", "subject": "issue_shared_credential", "modality": "fact", "conditions": [], "citations": ["A00406"], "confidence": 0.73},
+    {"claim_type": "access_provisioning", "subject": "grant_admin_rights", "modality": "fact", "conditions": [], "citations": ["A00398"], "confidence": 0.73}
+  ]},
+  "S0299-SEC": {"claims": [
+    {"claim_type": "service_continuity", "subject": "maintain_hot_standby", "modality": "fact", "conditions": ["data_is_personal"], "citations": ["A00662"], "confidence": 0.74}
+  ]},
+  "S0242-FIN": {"claims": [
+    {"claim_type": "employment_status", "subject": "extend_probation", "modality": "fact", "conditions": ["currency_is_foreign"], "citations": ["A00555"], "confidence": 0.75}
+  ]},
+  "S0242-HR": {"claims": [
+    {"claim_type": "access_provisioning", "subject": "grant_admin_rights", "modality": "fact", "conditions": [], "citations": ["A00408"], "confidence": 0.74},
+    {"claim_type": "access_provisioning", "subject": "grant_remote_access", "modality": "fact", "conditions": ["asset_is_classified", "data_is_personal"], "citations": ["A00412"], "confidence": 0.74}
+  ]},
+  "S0242-LEG": {"claims": [
+    {"claim_type": "employment_status", "subject": "extend_probation", "modality": "fact", "conditions": ["contract_value_high"], "citations": ["A00548"], "confidence": 0.76}
+  ]}
+ }
+}

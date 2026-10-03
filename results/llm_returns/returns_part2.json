@@ -1,0 +1,62 @@
+{
+ "model": "claude-opus-5",
+ "interface": "session, no API key available in the execution environment",
+ "note": "returns are verbatim; each was produced from the corresponding prompt in prompts.json and from nothing else",
+ "returns": {
+  "S0242-OPS": {"claims": [
+    {"claim_type": "access_provisioning", "subject": "grant_admin_rights", "modality": "fact", "conditions": [], "citations": ["A00396"], "confidence": 0.74}
+  ]},
+  "S0242-SEC": {"claims": [
+    {"claim_type": "service_continuity", "subject": "maintain_hot_standby", "modality": "fact", "conditions": ["access_is_privileged"], "citations": ["A00657"], "confidence": 0.73}
+  ]},
+  "S0098-FIN": {"claims": []},
+  "S0098-HR": {"claims": [
+    {"claim_type": "training_requirement", "subject": "complete_security_training", "modality": "should", "conditions": [], "citations": ["A00188"], "confidence": 0.87},
+    {"claim_type": "access_provisioning", "subject": "issue_shared_credential", "modality": "fact", "conditions": [], "citations": ["A00416"], "confidence": 0.73}
+  ]},
+  "S0098-OPS": {"claims": [
+    {"claim_type": "access_provisioning", "subject": "complete_security_training", "modality": "fact", "conditions": ["volume_is_high"], "citations": ["A00392"], "confidence": 0.72},
+    {"claim_type": "access_provisioning", "subject": "issue_shared_credential", "modality": "fact", "conditions": ["system_is_production"], "citations": ["A00404"], "confidence": 0.71}
+  ]},
+  "S0098-SEC": {"claims": [
+    {"claim_type": "change_window", "subject": "deploy_outside_window", "modality": "fact", "conditions": ["renewal_is_automatic"], "citations": ["A00461"], "confidence": 0.72},
+    {"claim_type": "training_requirement", "subject": "complete_security_training", "modality": "fact", "conditions": ["vendor_is_offshore"], "citations": ["A00676"], "confidence": 0.72}
+  ]},
+  "S0315-HR": {"claims": [
+    {"claim_type": "working_time", "subject": "allow_personal_device", "modality": "should", "conditions": ["asset_is_classified", "change_is_emergency"], "citations": ["A00186"], "confidence": 0.88}
+  ]},
+  "S0315-LEG": {"claims": [
+    {"claim_type": "data_classification", "subject": "retain_records_seven_years", "modality": "fact", "conditions": ["data_is_personal", "service_is_critical"], "citations": ["A00497"], "confidence": 0.72},
+    {"claim_type": "data_classification", "subject": "store_data_offshore", "modality": "fact", "conditions": ["change_is_emergency", "currency_is_foreign"], "citations": ["A00504"], "confidence": 0.76}
+  ]},
+  "S0315-OPS": {"claims": [
+    {"claim_type": "working_time", "subject": "allow_personal_device", "modality": "fact", "conditions": ["term_exceeds_year", "volume_is_high"], "citations": ["A00751"], "confidence": 0.73}
+  ]},
+  "S0315-SEC": {"claims": [
+    {"claim_type": "device_control", "subject": "allow_personal_device", "modality": "should_not", "conditions": [], "citations": ["A00222"], "confidence": 0.85}
+  ]},
+  "S0216-HR": {"claims": []},
+  "S0216-LEG": {"claims": [
+    {"claim_type": "ip_assignment", "subject": "assign_ip_to_company", "modality": "must", "conditions": ["access_is_privileged", "worker_is_contractor"], "citations": ["A00099"], "confidence": 0.9}
+  ]},
+  "S0216-OPS": {"claims": [
+    {"claim_type": "change_window", "subject": "run_penetration_test", "modality": "must", "conditions": [], "citations": ["A00358"], "confidence": 0.89},
+    {"claim_type": "vendor_security_review", "subject": "run_penetration_test", "modality": "fact", "conditions": ["term_exceeds_year"], "citations": ["A00742"], "confidence": 0.74}
+  ]},
+  "S0216-SEC": {"claims": [
+    {"claim_type": "change_window", "subject": "grant_admin_rights", "modality": "fact", "conditions": [], "citations": ["A00470"], "confidence": 0.73}
+  ]},
+  "S0346-FIN": {"claims": []},
+  "S0346-HR": {"claims": [
+    {"claim_type": "employment_status", "subject": "classify_as_contractor", "modality": "must", "conditions": ["contract_value_high", "renewal_is_automatic"], "citations": ["A00177"], "confidence": 0.91}
+  ]},
+  "S0346-LEG": {"claims": [
+    {"claim_type": "employment_status", "subject": "classify_as_contractor", "modality": "fact", "conditions": [], "citations": ["A00544"], "confidence": 0.75}
+  ]},
+  "S0346-OPS": {"claims": [
+    {"claim_type": "vendor_security_review", "subject": "run_penetration_test", "modality": "fact", "conditions": ["term_exceeds_year", "worker_is_contractor"], "citations": ["A00745"], "confidence": 0.74},
+    {"claim_type": "vendor_security_review", "subject": "share_data_with_vendor", "modality": "fact", "conditions": ["incident_is_material"], "citations": ["A00749"], "confidence": 0.73}
+  ]},
+  "S0346-SEC": {"claims": []}
+ }
+}

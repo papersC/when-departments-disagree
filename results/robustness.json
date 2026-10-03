@@ -1,0 +1,3028 @@
+{
+ "meta": {
+  "seed": 20260902,
+  "n_scenarios": 400,
+  "k": 24,
+  "lambda_star": 0.6,
+  "base_failure": {
+   "omit": 0.25,
+   "spurious": 0.2,
+   "modality": 0.15,
+   "stale": 0.3,
+   "fabricate": 0.12,
+   "overreach": 0.25
+  }
+ },
+ "E9_seed_spread": {
+  "seed_bases": [
+   5000,
+   5100,
+   5200,
+   5300,
+   5400
+  ],
+  "systems": {
+   "B0": {
+    "coverage": {
+     "mean": 0.7019,
+     "lo": 0.7019,
+     "hi": 0.7019,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.7881,
+     "lo": 0.7875,
+     "hi": 0.7888,
+     "range": 0.0013,
+     "sd": 0.0005,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.9158,
+     "lo": 0.9158,
+     "hi": 0.9158,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 10.49,
+     "lo": 10.455,
+     "hi": 10.515,
+     "range": 0.06,
+     "sd": 0.0208,
+     "n": 5
+    }
+   },
+   "B1": {
+    "coverage": {
+     "mean": 0.2861,
+     "lo": 0.2695,
+     "hi": 0.2962,
+     "range": 0.0267,
+     "sd": 0.0093,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.8065,
+     "lo": 0.8004,
+     "hi": 0.8105,
+     "range": 0.0101,
+     "sd": 0.0038,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.7299,
+     "lo": 0.7212,
+     "hi": 0.7409,
+     "range": 0.0197,
+     "sd": 0.009,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.8547,
+     "lo": 0.8421,
+     "hi": 0.8737,
+     "range": 0.0316,
+     "sd": 0.0108,
+     "n": 5
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 4.8015,
+     "lo": 4.7525,
+     "hi": 4.855,
+     "range": 0.1025,
+     "sd": 0.0332,
+     "n": 5
+    }
+   },
+   "B2": {
+    "coverage": {
+     "mean": 0.2861,
+     "lo": 0.2695,
+     "hi": 0.2962,
+     "range": 0.0267,
+     "sd": 0.0093,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.8065,
+     "lo": 0.8004,
+     "hi": 0.8105,
+     "range": 0.0101,
+     "sd": 0.0038,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 0.4479,
+     "lo": 0.4337,
+     "hi": 0.4546,
+     "range": 0.0209,
+     "sd": 0.0076,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.551,
+     "lo": 0.544,
+     "hi": 0.5649,
+     "range": 0.0209,
+     "sd": 0.0074,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.7299,
+     "lo": 0.7212,
+     "hi": 0.7409,
+     "range": 0.0197,
+     "sd": 0.009,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.8547,
+     "lo": 0.8421,
+     "hi": 0.8737,
+     "range": 0.0316,
+     "sd": 0.0108,
+     "n": 5
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 4.8015,
+     "lo": 4.7525,
+     "hi": 4.855,
+     "range": 0.1025,
+     "sd": 0.0332,
+     "n": 5
+    }
+   },
+   "B3": {
+    "coverage": {
+     "mean": 0.4154,
+     "lo": 0.3973,
+     "hi": 0.4314,
+     "range": 0.0341,
+     "sd": 0.012,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.7871,
+     "lo": 0.7789,
+     "hi": 0.7955,
+     "range": 0.0166,
+     "sd": 0.0056,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 0.426,
+     "lo": 0.419,
+     "hi": 0.4332,
+     "range": 0.0142,
+     "sd": 0.005,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.5734,
+     "lo": 0.5668,
+     "hi": 0.581,
+     "range": 0.0142,
+     "sd": 0.0051,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 0.9381,
+     "lo": 0.9286,
+     "hi": 0.9472,
+     "range": 0.0186,
+     "sd": 0.0066,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.2807,
+     "lo": 0.2762,
+     "hi": 0.2862,
+     "range": 0.01,
+     "sd": 0.0039,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.8853,
+     "lo": 0.8737,
+     "hi": 0.8947,
+     "range": 0.021,
+     "sd": 0.0096,
+     "n": 5
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 6.352,
+     "lo": 6.2775,
+     "hi": 6.4125,
+     "range": 0.135,
+     "sd": 0.0533,
+     "n": 5
+    }
+   },
+   "B3P": {
+    "coverage": {
+     "mean": 0.4969,
+     "lo": 0.4773,
+     "hi": 0.5244,
+     "range": 0.0471,
+     "sd": 0.0159,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.7715,
+     "lo": 0.7599,
+     "hi": 0.7796,
+     "range": 0.0197,
+     "sd": 0.0068,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 0.477,
+     "lo": 0.4696,
+     "hi": 0.4813,
+     "range": 0.0117,
+     "sd": 0.0042,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.523,
+     "lo": 0.5187,
+     "hi": 0.5304,
+     "range": 0.0117,
+     "sd": 0.0042,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 0.9041,
+     "lo": 0.8961,
+     "hi": 0.9095,
+     "range": 0.0134,
+     "sd": 0.0056,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.2541,
+     "lo": 0.2499,
+     "hi": 0.2595,
+     "range": 0.0096,
+     "sd": 0.004,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.8884,
+     "lo": 0.8737,
+     "hi": 0.9053,
+     "range": 0.0316,
+     "sd": 0.0113,
+     "n": 5
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 6.987,
+     "lo": 6.9375,
+     "hi": 7.0525,
+     "range": 0.115,
+     "sd": 0.0513,
+     "n": 5
+    }
+   },
+   "B4": {
+    "coverage": {
+     "mean": 0.4336,
+     "lo": 0.4222,
+     "hi": 0.4516,
+     "range": 0.0294,
+     "sd": 0.0107,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.7517,
+     "lo": 0.7399,
+     "hi": 0.76,
+     "range": 0.0201,
+     "sd": 0.0073,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 0.4877,
+     "lo": 0.4808,
+     "hi": 0.4979,
+     "range": 0.0171,
+     "sd": 0.0069,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.5118,
+     "lo": 0.5009,
+     "hi": 0.5192,
+     "range": 0.0183,
+     "sd": 0.0071,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 0.9399,
+     "lo": 0.9335,
+     "hi": 0.9424,
+     "range": 0.0089,
+     "sd": 0.0034,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.3042,
+     "lo": 0.2986,
+     "hi": 0.3157,
+     "range": 0.0171,
+     "sd": 0.0066,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.8758,
+     "lo": 0.8579,
+     "hi": 0.8842,
+     "range": 0.0263,
+     "sd": 0.0098,
+     "n": 5
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 5.751,
+     "lo": 5.6875,
+     "hi": 5.8375,
+     "range": 0.15,
+     "sd": 0.0608,
+     "n": 5
+    }
+   },
+   "B5": {
+    "coverage": {
+     "mean": 0.8766,
+     "lo": 0.8689,
+     "hi": 0.8857,
+     "range": 0.0168,
+     "sd": 0.0067,
+     "n": 5
+    },
+    "spurious_rate": {
+     "mean": 0.2261,
+     "lo": 0.2125,
+     "hi": 0.2386,
+     "range": 0.0261,
+     "sd": 0.0101,
+     "n": 5
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.0937,
+     "lo": 0.0737,
+     "hi": 0.1,
+     "range": 0.0263,
+     "sd": 0.0102,
+     "n": 5
+    },
+    "escalation_precision": {
+     "mean": 0.9133,
+     "lo": 0.8848,
+     "hi": 0.9454,
+     "range": 0.0606,
+     "sd": 0.0198,
+     "n": 5
+    },
+    "escalation_recall": {
+     "mean": 0.8947,
+     "lo": 0.8895,
+     "hi": 0.9105,
+     "range": 0.021,
+     "sd": 0.0081,
+     "n": 5
+    },
+    "n_emitted": {
+     "mean": 3.4505,
+     "lo": 3.405,
+     "hi": 3.4725,
+     "range": 0.0675,
+     "sd": 0.0246,
+     "n": 5
+    }
+   }
+  },
+  "raw": {
+   "B0": {
+    "coverage": [
+     0.7019,
+     0.7019,
+     0.7019,
+     0.7019,
+     0.7019
+    ],
+    "spurious_rate": [
+     0.7875,
+     0.788,
+     0.7888,
+     0.7886,
+     0.7875
+    ],
+    "attribution_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.9158,
+     0.9158,
+     0.9158,
+     0.9158,
+     0.9158
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     10.48,
+     10.515,
+     10.4975,
+     10.5025,
+     10.455
+    ]
+   },
+   "B1": {
+    "coverage": [
+     0.2859,
+     0.2695,
+     0.2935,
+     0.2962,
+     0.2854
+    ],
+    "spurious_rate": [
+     0.8105,
+     0.8102,
+     0.8042,
+     0.8004,
+     0.8071
+    ],
+    "attribution_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.7409,
+     0.7229,
+     0.7407,
+     0.7212,
+     0.7237
+    ],
+    "silent_wrong_answer_rate": [
+     0.8526,
+     0.8421,
+     0.8474,
+     0.8579,
+     0.8737
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     4.7875,
+     4.7525,
+     4.8075,
+     4.855,
+     4.805
+    ]
+   },
+   "B2": {
+    "coverage": [
+     0.2859,
+     0.2695,
+     0.2935,
+     0.2962,
+     0.2854
+    ],
+    "spurious_rate": [
+     0.8105,
+     0.8102,
+     0.8042,
+     0.8004,
+     0.8071
+    ],
+    "attribution_rate": [
+     0.4542,
+     0.4337,
+     0.4491,
+     0.4546,
+     0.4477
+    ],
+    "jurisdiction_violation_rate": [
+     0.5458,
+     0.5649,
+     0.5509,
+     0.544,
+     0.5495
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.7409,
+     0.7229,
+     0.7407,
+     0.7212,
+     0.7237
+    ],
+    "silent_wrong_answer_rate": [
+     0.8526,
+     0.8421,
+     0.8474,
+     0.8579,
+     0.8737
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     4.7875,
+     4.7525,
+     4.8075,
+     4.855,
+     4.805
+    ]
+   },
+   "B3": {
+    "coverage": [
+     0.4203,
+     0.3973,
+     0.4314,
+     0.4065,
+     0.4214
+    ],
+    "spurious_rate": [
+     0.7866,
+     0.7903,
+     0.7789,
+     0.7955,
+     0.7844
+    ],
+    "attribution_rate": [
+     0.4251,
+     0.43,
+     0.4229,
+     0.419,
+     0.4332
+    ],
+    "jurisdiction_violation_rate": [
+     0.5749,
+     0.5686,
+     0.5756,
+     0.581,
+     0.5668
+    ],
+    "citation_validity": [
+     0.9368,
+     0.9286,
+     0.9435,
+     0.9472,
+     0.9344
+    ],
+    "stale_obligation_rate": [
+     0.2785,
+     0.2845,
+     0.2862,
+     0.2762,
+     0.278
+    ],
+    "silent_wrong_answer_rate": [
+     0.8895,
+     0.8737,
+     0.8947,
+     0.8947,
+     0.8737
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     6.4125,
+     6.34,
+     6.2775,
+     6.4125,
+     6.3175
+    ]
+   },
+   "B3P": {
+    "coverage": [
+     0.4968,
+     0.4773,
+     0.5244,
+     0.486,
+     0.4999
+    ],
+    "spurious_rate": [
+     0.7741,
+     0.7756,
+     0.7599,
+     0.7796,
+     0.7685
+    ],
+    "attribution_rate": [
+     0.4765,
+     0.4808,
+     0.4767,
+     0.4696,
+     0.4813
+    ],
+    "jurisdiction_violation_rate": [
+     0.5235,
+     0.5192,
+     0.5233,
+     0.5304,
+     0.5187
+    ],
+    "citation_validity": [
+     0.9069,
+     0.8961,
+     0.9095,
+     0.9091,
+     0.8988
+    ],
+    "stale_obligation_rate": [
+     0.2519,
+     0.2595,
+     0.2583,
+     0.2499,
+     0.2509
+    ],
+    "silent_wrong_answer_rate": [
+     0.8895,
+     0.8737,
+     0.8947,
+     0.9053,
+     0.8789
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     7.0525,
+     6.9625,
+     6.9375,
+     7.045,
+     6.9375
+    ]
+   },
+   "B4": {
+    "coverage": [
+     0.4294,
+     0.4396,
+     0.4516,
+     0.4222,
+     0.4253
+    ],
+    "spurious_rate": [
+     0.7572,
+     0.7399,
+     0.7472,
+     0.76,
+     0.7544
+    ],
+    "attribution_rate": [
+     0.4808,
+     0.4979,
+     0.4814,
+     0.4845,
+     0.4938
+    ],
+    "jurisdiction_violation_rate": [
+     0.5192,
+     0.5009,
+     0.5173,
+     0.5155,
+     0.5062
+    ],
+    "citation_validity": [
+     0.9335,
+     0.9419,
+     0.9421,
+     0.9424,
+     0.9395
+    ],
+    "stale_obligation_rate": [
+     0.2986,
+     0.3157,
+     0.3073,
+     0.3004,
+     0.2989
+    ],
+    "silent_wrong_answer_rate": [
+     0.8842,
+     0.8579,
+     0.8842,
+     0.8789,
+     0.8737
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     5.81,
+     5.6875,
+     5.7025,
+     5.8375,
+     5.7175
+    ]
+   },
+   "B5": {
+    "coverage": [
+     0.8695,
+     0.8769,
+     0.882,
+     0.8857,
+     0.8689
+    ],
+    "spurious_rate": [
+     0.2372,
+     0.221,
+     0.2213,
+     0.2125,
+     0.2386
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.1,
+     0.0947,
+     0.1,
+     0.1,
+     0.0737
+    ],
+    "escalation_precision": [
+     0.9037,
+     0.9189,
+     0.9135,
+     0.8848,
+     0.9454
+    ],
+    "escalation_recall": [
+     0.8895,
+     0.8947,
+     0.8895,
+     0.8895,
+     0.9105
+    ],
+    "n_emitted": [
+     3.4675,
+     3.405,
+     3.4725,
+     3.445,
+     3.4625
+    ]
+   }
+  }
+ },
+ "E10_ablation_noise": {
+  "seed_bases": [
+   8000,
+   8100,
+   8200
+  ],
+  "ablations": {
+   "full": {
+    "coverage": {
+     "mean": 0.8833,
+     "lo": 0.8768,
+     "hi": 0.8884,
+     "range": 0.0116,
+     "sd": 0.0048,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2233,
+     "lo": 0.2155,
+     "hi": 0.2299,
+     "range": 0.0144,
+     "sd": 0.0059,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.1035,
+     "lo": 0.0895,
+     "hi": 0.1263,
+     "range": 0.0368,
+     "sd": 0.0163,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.9069,
+     "lo": 0.8953,
+     "hi": 0.9162,
+     "range": 0.0209,
+     "sd": 0.0087,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.886,
+     "lo": 0.8632,
+     "hi": 0.9,
+     "range": 0.0368,
+     "sd": 0.0162,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.4625,
+     "lo": 3.41,
+     "hi": 3.4975,
+     "range": 0.0875,
+     "sd": 0.0378,
+     "n": 3
+    }
+   },
+   "no_R0_admissibility": {
+    "coverage": {
+     "mean": 0.8824,
+     "lo": 0.8781,
+     "hi": 0.8861,
+     "range": 0.008,
+     "sd": 0.0033,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2306,
+     "lo": 0.223,
+     "hi": 0.2353,
+     "range": 0.0123,
+     "sd": 0.0054,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 0.9631,
+     "lo": 0.9607,
+     "hi": 0.9674,
+     "range": 0.0067,
+     "sd": 0.003,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.1052,
+     "lo": 0.0947,
+     "hi": 0.1263,
+     "range": 0.0316,
+     "sd": 0.0149,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.9034,
+     "lo": 0.8901,
+     "hi": 0.9111,
+     "range": 0.021,
+     "sd": 0.0095,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.8842,
+     "lo": 0.8632,
+     "hi": 0.8947,
+     "range": 0.0315,
+     "sd": 0.0148,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.4883,
+     "lo": 3.44,
+     "hi": 3.52,
+     "range": 0.08,
+     "sd": 0.0347,
+     "n": 3
+    }
+   },
+   "no_R1_currency": {
+    "coverage": {
+     "mean": 0.7599,
+     "lo": 0.7531,
+     "hi": 0.7663,
+     "range": 0.0132,
+     "sd": 0.0054,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.4343,
+     "lo": 0.427,
+     "hi": 0.4435,
+     "range": 0.0165,
+     "sd": 0.0069,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.3629,
+     "lo": 0.3477,
+     "hi": 0.381,
+     "range": 0.0333,
+     "sd": 0.0138,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.2456,
+     "lo": 0.2,
+     "hi": 0.2842,
+     "range": 0.0842,
+     "sd": 0.0347,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.7656,
+     "lo": 0.7616,
+     "hi": 0.7722,
+     "range": 0.0106,
+     "sd": 0.0047,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.7333,
+     "lo": 0.6895,
+     "hi": 0.7789,
+     "range": 0.0894,
+     "sd": 0.0365,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 4.1758,
+     "lo": 4.1375,
+     "hi": 4.2175,
+     "range": 0.08,
+     "sd": 0.0327,
+     "n": 3
+    }
+   },
+   "no_R2_jurisdiction": {
+    "coverage": {
+     "mean": 0.8421,
+     "lo": 0.8363,
+     "hi": 0.8479,
+     "range": 0.0116,
+     "sd": 0.0047,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2906,
+     "lo": 0.2781,
+     "hi": 0.2977,
+     "range": 0.0196,
+     "sd": 0.0089,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 0.9045,
+     "lo": 0.8945,
+     "hi": 0.9191,
+     "range": 0.0246,
+     "sd": 0.0106,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0949,
+     "lo": 0.0807,
+     "hi": 0.1047,
+     "range": 0.024,
+     "sd": 0.0103,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.1228,
+     "lo": 0.1,
+     "hi": 0.1526,
+     "range": 0.0526,
+     "sd": 0.022,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.8071,
+     "lo": 0.7882,
+     "hi": 0.8195,
+     "range": 0.0313,
+     "sd": 0.0136,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.8667,
+     "lo": 0.8421,
+     "hi": 0.8842,
+     "range": 0.0421,
+     "sd": 0.0179,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.625,
+     "lo": 3.5525,
+     "hi": 3.675,
+     "range": 0.1225,
+     "sd": 0.0525,
+     "n": 3
+    }
+   },
+   "no_R3_precedence": {
+    "coverage": {
+     "mean": 0.827,
+     "lo": 0.8195,
+     "hi": 0.8341,
+     "range": 0.0146,
+     "sd": 0.006,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2315,
+     "lo": 0.2234,
+     "hi": 0.2391,
+     "range": 0.0157,
+     "sd": 0.0064,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.086,
+     "lo": 0.0737,
+     "hi": 0.0947,
+     "range": 0.021,
+     "sd": 0.0089,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.7607,
+     "lo": 0.7576,
+     "hi": 0.7634,
+     "range": 0.0058,
+     "sd": 0.0024,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.9088,
+     "lo": 0.9,
+     "hi": 0.9211,
+     "range": 0.0211,
+     "sd": 0.009,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.3058,
+     "lo": 3.25,
+     "hi": 3.345,
+     "range": 0.095,
+     "sd": 0.0405,
+     "n": 3
+    }
+   },
+   "no_R4_evidence": {
+    "coverage": {
+     "mean": 0.8836,
+     "lo": 0.8786,
+     "hi": 0.8871,
+     "range": 0.0085,
+     "sd": 0.0036,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2226,
+     "lo": 0.2151,
+     "hi": 0.2282,
+     "range": 0.0131,
+     "sd": 0.0055,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.1,
+     "lo": 0.0895,
+     "hi": 0.1211,
+     "range": 0.0316,
+     "sd": 0.0149,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.9122,
+     "lo": 0.8953,
+     "hi": 0.9218,
+     "range": 0.0265,
+     "sd": 0.012,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.8895,
+     "lo": 0.8684,
+     "hi": 0.9,
+     "range": 0.0316,
+     "sd": 0.0149,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.4625,
+     "lo": 3.4125,
+     "hi": 3.495,
+     "range": 0.0825,
+     "sd": 0.0359,
+     "n": 3
+    }
+   },
+   "no_R5_completeness": {
+    "coverage": {
+     "mean": 0.8833,
+     "lo": 0.8768,
+     "hi": 0.8884,
+     "range": 0.0116,
+     "sd": 0.0048,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2233,
+     "lo": 0.2155,
+     "hi": 0.2299,
+     "range": 0.0144,
+     "sd": 0.0059,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.1088,
+     "lo": 0.0947,
+     "hi": 0.1316,
+     "range": 0.0369,
+     "sd": 0.0163,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.8808,
+     "lo": 0.8675,
+     "hi": 0.8921,
+     "range": 0.0246,
+     "sd": 0.0101,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.6719,
+     "lo": 0.6526,
+     "hi": 0.6895,
+     "range": 0.0369,
+     "sd": 0.0151,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.4625,
+     "lo": 3.41,
+     "hi": 3.4975,
+     "range": 0.0875,
+     "sd": 0.0378,
+     "n": 3
+    }
+   },
+   "no_completeness_probe": {
+    "coverage": {
+     "mean": 0.4044,
+     "lo": 0.3807,
+     "hi": 0.4182,
+     "range": 0.0375,
+     "sd": 0.0169,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.358,
+     "lo": 0.3538,
+     "hi": 0.3612,
+     "range": 0.0074,
+     "sd": 0.0031,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.0105,
+     "lo": 0.0105,
+     "hi": 0.0105,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.504,
+     "lo": 0.5027,
+     "hi": 0.5054,
+     "range": 0.0027,
+     "sd": 0.0011,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.9895,
+     "lo": 0.9895,
+     "hi": 0.9895,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 1.9933,
+     "lo": 1.9375,
+     "hi": 2.03,
+     "range": 0.0925,
+     "sd": 0.0401,
+     "n": 3
+    }
+   },
+   "no_R6_ordering": {
+    "coverage": {
+     "mean": 0.8833,
+     "lo": 0.8768,
+     "hi": 0.8884,
+     "range": 0.0116,
+     "sd": 0.0048,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2233,
+     "lo": 0.2155,
+     "hi": 0.2299,
+     "range": 0.0144,
+     "sd": 0.0059,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.1035,
+     "lo": 0.0895,
+     "hi": 0.1263,
+     "range": 0.0368,
+     "sd": 0.0163,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.9031,
+     "lo": 0.8927,
+     "hi": 0.9096,
+     "range": 0.0169,
+     "sd": 0.0074,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.8158,
+     "lo": 0.7947,
+     "hi": 0.8316,
+     "range": 0.0369,
+     "sd": 0.0155,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.4625,
+     "lo": 3.41,
+     "hi": 3.4975,
+     "range": 0.0875,
+     "sd": 0.0378,
+     "n": 3
+    }
+   },
+   "no_R7_definitional": {
+    "coverage": {
+     "mean": 0.8977,
+     "lo": 0.8913,
+     "hi": 0.9047,
+     "range": 0.0134,
+     "sd": 0.0055,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.2726,
+     "lo": 0.2662,
+     "hi": 0.2803,
+     "range": 0.0141,
+     "sd": 0.0058,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.2474,
+     "lo": 0.2263,
+     "hi": 0.2684,
+     "range": 0.0421,
+     "sd": 0.0172,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.9484,
+     "lo": 0.9448,
+     "hi": 0.9527,
+     "range": 0.0079,
+     "sd": 0.0033,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.7421,
+     "lo": 0.7211,
+     "hi": 0.7632,
+     "range": 0.0421,
+     "sd": 0.0172,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 3.8025,
+     "lo": 3.7775,
+     "hi": 3.8175,
+     "range": 0.04,
+     "sd": 0.0178,
+     "n": 3
+    }
+   },
+   "no_escalation": {
+    "coverage": {
+     "mean": 0.8981,
+     "lo": 0.8933,
+     "hi": 0.9038,
+     "range": 0.0105,
+     "sd": 0.0043,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.326,
+     "lo": 0.3194,
+     "hi": 0.3304,
+     "range": 0.011,
+     "sd": 0.0047,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.7,
+     "lo": 0.7,
+     "hi": 0.7,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 4.2133,
+     "lo": 4.21,
+     "hi": 4.2175,
+     "range": 0.0075,
+     "sd": 0.0031,
+     "n": 3
+    }
+   }
+  },
+  "raw": {
+   "full": {
+    "coverage": [
+     0.8884,
+     0.8768,
+     0.8846
+    ],
+    "spurious_rate": [
+     0.2244,
+     0.2299,
+     0.2155
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.0947,
+     0.1263,
+     0.0895
+    ],
+    "escalation_precision": [
+     0.9091,
+     0.9162,
+     0.8953
+    ],
+    "escalation_recall": [
+     0.8947,
+     0.8632,
+     0.9
+    ],
+    "n_emitted": [
+     3.4975,
+     3.48,
+     3.41
+    ]
+   },
+   "no_R0_admissibility": {
+    "coverage": [
+     0.8861,
+     0.8781,
+     0.883
+    ],
+    "spurious_rate": [
+     0.2336,
+     0.2353,
+     0.223
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     0.9613,
+     0.9607,
+     0.9674
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.0947,
+     0.1263,
+     0.0947
+    ],
+    "escalation_precision": [
+     0.9091,
+     0.9111,
+     0.8901
+    ],
+    "escalation_recall": [
+     0.8947,
+     0.8632,
+     0.8947
+    ],
+    "n_emitted": [
+     3.52,
+     3.505,
+     3.44
+    ]
+   },
+   "no_R1_currency": {
+    "coverage": [
+     0.7663,
+     0.7531,
+     0.7602
+    ],
+    "spurious_rate": [
+     0.427,
+     0.4435,
+     0.4325
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.3477,
+     0.381,
+     0.3599
+    ],
+    "silent_wrong_answer_rate": [
+     0.2526,
+     0.2842,
+     0.2
+    ],
+    "escalation_precision": [
+     0.7722,
+     0.7616,
+     0.7629
+    ],
+    "escalation_recall": [
+     0.7316,
+     0.6895,
+     0.7789
+    ],
+    "n_emitted": [
+     4.1725,
+     4.2175,
+     4.1375
+    ]
+   },
+   "no_R2_jurisdiction": {
+    "coverage": [
+     0.8422,
+     0.8363,
+     0.8479
+    ],
+    "spurious_rate": [
+     0.2977,
+     0.296,
+     0.2781
+    ],
+    "attribution_rate": [
+     0.8945,
+     0.8999,
+     0.9191
+    ],
+    "jurisdiction_violation_rate": [
+     0.1047,
+     0.0994,
+     0.0807
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.1158,
+     0.1526,
+     0.1
+    ],
+    "escalation_precision": [
+     0.8137,
+     0.7882,
+     0.8195
+    ],
+    "escalation_recall": [
+     0.8737,
+     0.8421,
+     0.8842
+    ],
+    "n_emitted": [
+     3.675,
+     3.6475,
+     3.5525
+    ]
+   },
+   "no_R3_precedence": {
+    "coverage": [
+     0.8341,
+     0.8195,
+     0.8273
+    ],
+    "spurious_rate": [
+     0.2321,
+     0.2391,
+     0.2234
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.0895,
+     0.0947,
+     0.0737
+    ],
+    "escalation_precision": [
+     0.7611,
+     0.7634,
+     0.7576
+    ],
+    "escalation_recall": [
+     0.9053,
+     0.9,
+     0.9211
+    ],
+    "n_emitted": [
+     3.345,
+     3.3225,
+     3.25
+    ]
+   },
+   "no_R4_evidence": {
+    "coverage": [
+     0.8871,
+     0.8786,
+     0.885
+    ],
+    "spurious_rate": [
+     0.2246,
+     0.2282,
+     0.2151
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.0895,
+     0.1211,
+     0.0895
+    ],
+    "escalation_precision": [
+     0.9194,
+     0.9218,
+     0.8953
+    ],
+    "escalation_recall": [
+     0.9,
+     0.8684,
+     0.9
+    ],
+    "n_emitted": [
+     3.495,
+     3.48,
+     3.4125
+    ]
+   },
+   "no_R5_completeness": {
+    "coverage": [
+     0.8884,
+     0.8768,
+     0.8846
+    ],
+    "spurious_rate": [
+     0.2244,
+     0.2299,
+     0.2155
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.1,
+     0.1316,
+     0.0947
+    ],
+    "escalation_precision": [
+     0.8828,
+     0.8921,
+     0.8675
+    ],
+    "escalation_recall": [
+     0.6737,
+     0.6526,
+     0.6895
+    ],
+    "n_emitted": [
+     3.4975,
+     3.48,
+     3.41
+    ]
+   },
+   "no_completeness_probe": {
+    "coverage": [
+     0.4144,
+     0.3807,
+     0.4182
+    ],
+    "spurious_rate": [
+     0.359,
+     0.3612,
+     0.3538
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.0105,
+     0.0105,
+     0.0105
+    ],
+    "escalation_precision": [
+     0.504,
+     0.5027,
+     0.5054
+    ],
+    "escalation_recall": [
+     0.9895,
+     0.9895,
+     0.9895
+    ],
+    "n_emitted": [
+     2.03,
+     1.9375,
+     2.0125
+    ]
+   },
+   "no_R6_ordering": {
+    "coverage": [
+     0.8884,
+     0.8768,
+     0.8846
+    ],
+    "spurious_rate": [
+     0.2244,
+     0.2299,
+     0.2155
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.0947,
+     0.1263,
+     0.0895
+    ],
+    "escalation_precision": [
+     0.907,
+     0.9096,
+     0.8927
+    ],
+    "escalation_recall": [
+     0.8211,
+     0.7947,
+     0.8316
+    ],
+    "n_emitted": [
+     3.4975,
+     3.48,
+     3.41
+    ]
+   },
+   "no_R7_definitional": {
+    "coverage": [
+     0.9047,
+     0.8913,
+     0.897
+    ],
+    "spurious_rate": [
+     0.2662,
+     0.2803,
+     0.2712
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.2474,
+     0.2684,
+     0.2263
+    ],
+    "escalation_precision": [
+     0.9527,
+     0.9448,
+     0.9477
+    ],
+    "escalation_recall": [
+     0.7421,
+     0.7211,
+     0.7632
+    ],
+    "n_emitted": [
+     3.8125,
+     3.8175,
+     3.7775
+    ]
+   },
+   "no_escalation": {
+    "coverage": [
+     0.9038,
+     0.8933,
+     0.8972
+    ],
+    "spurious_rate": [
+     0.3194,
+     0.3304,
+     0.3281
+    ],
+    "attribution_rate": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "jurisdiction_violation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "citation_validity": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.7,
+     0.7,
+     0.7
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     4.2125,
+     4.2175,
+     4.21
+    ]
+   }
+  }
+ },
+ "E11_modality_sensitivity": {
+  "wilson_upper_bound": 0.259,
+  "lambda_star": 0.6,
+  "base_rate_required": 0.4317,
+  "base_rate_used": 0.437,
+  "note": "the standard base rate is 0.15, giving a simulated rate of 0.090 at lambda star, which is below the bound; the raised base rate brings the simulated rate to or above it",
+  "runs": {
+   "standard|B5": {
+    "modality_rate": 0.09,
+    "coverage": 0.8923,
+    "spurious_rate": 0.2207,
+    "attribution_rate": 1.0,
+    "jurisdiction_violation_rate": 0.0,
+    "citation_validity": 1.0,
+    "stale_obligation_rate": 0.0,
+    "silent_wrong_answer_rate": 0.0947,
+    "escalation_precision": 0.9037,
+    "escalation_recall": 0.8895,
+    "n_emitted": 3.455,
+    "detection": {
+     "C1": {
+      "precision": 0.5,
+      "recall": 0.8778,
+      "support": 90
+     },
+     "C2": {
+      "precision": 0.9412,
+      "recall": 0.6957,
+      "support": 23
+     },
+     "C3": {
+      "precision": 1.0,
+      "recall": 0.5685,
+      "support": 343
+     },
+     "C4": {
+      "precision": 0.8214,
+      "recall": 0.9399,
+      "support": 1282
+     },
+     "C5": {
+      "precision": 0.7619,
+      "recall": 0.6154,
+      "support": 78
+     },
+     "C6": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 61
+     }
+    }
+   },
+   "standard|B3P": {
+    "modality_rate": 0.09,
+    "coverage": 0.5007,
+    "spurious_rate": 0.7687,
+    "attribution_rate": 0.4878,
+    "jurisdiction_violation_rate": 0.5122,
+    "citation_validity": 0.89,
+    "stale_obligation_rate": 0.2493,
+    "silent_wrong_answer_rate": 0.8947,
+    "escalation_precision": null,
+    "escalation_recall": 0.0,
+    "n_emitted": 6.9775,
+    "detection": null
+   },
+   "modality_at_bound|B5": {
+    "modality_rate": 0.2622,
+    "coverage": 0.7099,
+    "spurious_rate": 0.3952,
+    "attribution_rate": 1.0,
+    "jurisdiction_violation_rate": 0.0,
+    "citation_validity": 1.0,
+    "stale_obligation_rate": 0.0,
+    "silent_wrong_answer_rate": 0.1368,
+    "escalation_precision": 0.8939,
+    "escalation_recall": 0.8421,
+    "n_emitted": 3.5125,
+    "detection": {
+     "C1": {
+      "precision": 0.4648,
+      "recall": 0.7333,
+      "support": 90
+     },
+     "C2": {
+      "precision": 0.9333,
+      "recall": 0.6087,
+      "support": 23
+     },
+     "C3": {
+      "precision": 1.0,
+      "recall": 0.5723,
+      "support": 339
+     },
+     "C4": {
+      "precision": 0.8293,
+      "recall": 0.942,
+      "support": 1310
+     },
+     "C5": {
+      "precision": 0.7273,
+      "recall": 0.6154,
+      "support": 78
+     },
+     "C6": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 61
+     }
+    }
+   },
+   "modality_at_bound|B3P": {
+    "modality_rate": 0.2622,
+    "coverage": 0.4744,
+    "spurious_rate": 0.7849,
+    "attribution_rate": 0.4843,
+    "jurisdiction_violation_rate": 0.5157,
+    "citation_validity": 0.8942,
+    "stale_obligation_rate": 0.2625,
+    "silent_wrong_answer_rate": 0.8947,
+    "escalation_precision": null,
+    "escalation_recall": 0.0,
+    "n_emitted": 6.9775,
+    "detection": null
+   }
+  }
+ },
+ "E12_review_baselines": {
+  "seed_bases": [
+   5000,
+   5100,
+   5200
+  ],
+  "note": "B2F is a pooled index with department labels plus an effective window currency filter and an exact metadata lookup, and no lattice. B4A is the referee of B4 given an abstention state on subjects where two departments assert incompatible modalities.",
+  "systems": {
+   "B2F": {
+    "coverage": {
+     "mean": 0.7006,
+     "lo": 0.6911,
+     "hi": 0.706,
+     "range": 0.0149,
+     "sd": 0.0067,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.6148,
+     "lo": 0.6056,
+     "hi": 0.6214,
+     "range": 0.0158,
+     "sd": 0.0067,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 0.6479,
+     "lo": 0.6387,
+     "hi": 0.6546,
+     "range": 0.0159,
+     "sd": 0.0067,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.3521,
+     "lo": 0.3454,
+     "hi": 0.3613,
+     "range": 0.0159,
+     "sd": 0.0067,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 0.9491,
+     "lo": 0.9469,
+     "hi": 0.9505,
+     "range": 0.0036,
+     "sd": 0.0016,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.7754,
+     "lo": 0.7737,
+     "hi": 0.7789,
+     "range": 0.0052,
+     "sd": 0.0025,
+     "n": 3
+    },
+    "escalation_precision": null,
+    "escalation_recall": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "range": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 5.6525,
+     "lo": 5.61,
+     "hi": 5.6925,
+     "range": 0.0825,
+     "sd": 0.0337,
+     "n": 3
+    }
+   },
+   "B4A": {
+    "coverage": {
+     "mean": 0.3385,
+     "lo": 0.3289,
+     "hi": 0.3436,
+     "range": 0.0147,
+     "sd": 0.0068,
+     "n": 3
+    },
+    "spurious_rate": {
+     "mean": 0.7188,
+     "lo": 0.7134,
+     "hi": 0.7257,
+     "range": 0.0123,
+     "sd": 0.0051,
+     "n": 3
+    },
+    "attribution_rate": {
+     "mean": 0.4998,
+     "lo": 0.4873,
+     "hi": 0.5128,
+     "range": 0.0255,
+     "sd": 0.0104,
+     "n": 3
+    },
+    "jurisdiction_violation_rate": {
+     "mean": 0.491,
+     "lo": 0.4787,
+     "hi": 0.4999,
+     "range": 0.0212,
+     "sd": 0.009,
+     "n": 3
+    },
+    "citation_validity": {
+     "mean": 0.9437,
+     "lo": 0.9372,
+     "hi": 0.9497,
+     "range": 0.0125,
+     "sd": 0.0051,
+     "n": 3
+    },
+    "stale_obligation_rate": {
+     "mean": 0.3105,
+     "lo": 0.3044,
+     "hi": 0.3218,
+     "range": 0.0174,
+     "sd": 0.008,
+     "n": 3
+    },
+    "silent_wrong_answer_rate": {
+     "mean": 0.114,
+     "lo": 0.0789,
+     "hi": 0.1368,
+     "range": 0.0579,
+     "sd": 0.0252,
+     "n": 3
+    },
+    "escalation_precision": {
+     "mean": 0.485,
+     "lo": 0.4819,
+     "hi": 0.4912,
+     "range": 0.0093,
+     "sd": 0.0044,
+     "n": 3
+    },
+    "escalation_recall": {
+     "mean": 0.8544,
+     "lo": 0.8421,
+     "hi": 0.8789,
+     "range": 0.0368,
+     "sd": 0.0173,
+     "n": 3
+    },
+    "n_emitted": {
+     "mean": 4.1817,
+     "lo": 4.0475,
+     "hi": 4.2975,
+     "range": 0.25,
+     "sd": 0.1029,
+     "n": 3
+    }
+   }
+  },
+  "raw": {
+   "B2F": {
+    "coverage": [
+     0.706,
+     0.7046,
+     0.6911
+    ],
+    "spurious_rate": [
+     0.6173,
+     0.6056,
+     0.6214
+    ],
+    "attribution_rate": [
+     0.6505,
+     0.6546,
+     0.6387
+    ],
+    "jurisdiction_violation_rate": [
+     0.3495,
+     0.3454,
+     0.3613
+    ],
+    "citation_validity": [
+     0.9505,
+     0.95,
+     0.9469
+    ],
+    "stale_obligation_rate": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "silent_wrong_answer_rate": [
+     0.7737,
+     0.7737,
+     0.7789
+    ],
+    "escalation_precision": [
+     null,
+     null,
+     null
+    ],
+    "escalation_recall": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_emitted": [
+     5.6925,
+     5.61,
+     5.655
+    ]
+   },
+   "B4A": {
+    "coverage": [
+     0.3429,
+     0.3289,
+     0.3436
+    ],
+    "spurious_rate": [
+     0.7257,
+     0.7134,
+     0.7173
+    ],
+    "attribution_rate": [
+     0.4992,
+     0.5128,
+     0.4873
+    ],
+    "jurisdiction_violation_rate": [
+     0.4945,
+     0.4787,
+     0.4999
+    ],
+    "citation_validity": [
+     0.9372,
+     0.9442,
+     0.9497
+    ],
+    "stale_obligation_rate": [
+     0.3044,
+     0.3218,
+     0.3052
+    ],
+    "silent_wrong_answer_rate": [
+     0.1263,
+     0.0789,
+     0.1368
+    ],
+    "escalation_precision": [
+     0.4819,
+     0.4912,
+     0.4819
+    ],
+    "escalation_recall": [
+     0.8421,
+     0.8789,
+     0.8421
+    ],
+    "n_emitted": [
+     4.2975,
+     4.0475,
+     4.2
+    ]
+   }
+  }
+ },
+ "E13_rule_order_variants": {
+  "note": "Two corrections proposed in review were implemented and measured. V1 restricts the definitional test to a shared subject, the scope C1 uses. V2 evaluates the unmapped term test before the contradiction test. Both degrade the system; the order as implemented is retained.",
+  "seed_base": 5000,
+  "variants": {
+   "V0_as_implemented": {
+    "coverage": 0.8695,
+    "spurious": 0.2372,
+    "silent": 0.1,
+    "escP": 0.9037,
+    "escR": 0.8895,
+    "C1": {
+     "p": 0.4695,
+     "r": 0.8556
+    },
+    "C5": {
+     "p": 0.7419,
+     "r": 0.5897,
+     "tp": 46,
+     "fp": 16,
+     "fn": 32
+    }
+   },
+   "V1_subject_scoped": {
+    "coverage": 0.8843,
+    "spurious": 0.2778,
+    "silent": 0.2316,
+    "escP": 0.9412,
+    "escR": 0.7579,
+    "C1": {
+     "p": 0.4695,
+     "r": 0.8556
+    },
+    "C5": {
+     "p": 1.0,
+     "r": 0.0769,
+     "tp": 6,
+     "fp": 0,
+     "fn": 72
+    }
+   },
+   "V2_prepass": {
+    "coverage": 0.883,
+    "spurious": 0.2736,
+    "silent": 0.2105,
+    "escP": 0.897,
+    "escR": 0.7789,
+    "C1": {
+     "p": 0.4691,
+     "r": 0.8444
+    },
+    "C5": {
+     "p": 0.5357,
+     "r": 0.1923,
+     "tp": 15,
+     "fp": 13,
+     "fn": 63
+    }
+   },
+   "V3_both": {
+    "coverage": 0.8843,
+    "spurious": 0.2805,
+    "silent": 0.2474,
+    "escP": 0.94,
+    "escR": 0.7421,
+    "C1": {
+     "p": 0.4663,
+     "r": 0.8444
+    },
+    "C5": {
+     "p": 1.0,
+     "r": 0.0256,
+     "tp": 2,
+     "fp": 0,
+     "fn": 76
+    }
+   }
+  }
+ },
+ "E14_replay": {
+  "scenarios": 400,
+  "identical": 400,
+  "divergent": 0,
+  "advice_set_sha256": "36e7e722e4e5a4e80fe256890b6253fc",
+  "note": "every settlement was recomputed from the same committed inputs and compared on obligations, attribution, support, escalations and the rule trace; the advice set hash is also stable across an independent rebuild of the corpus from the global seed. R6 detects a cycle and does not emit a topological order, so no ordering convention is required for replay."
+ }
+}

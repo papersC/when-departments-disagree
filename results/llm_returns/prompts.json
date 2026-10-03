@@ -1,0 +1,6354 @@
+{
+ "instruction": "You are the drafting agent of one department of an organisation. You are given the situation an employee has raised, the claim types your department has been asked about, and the artefacts served to you from your own department's store. Emit one claim per claim type and subject that your served artefacts support. Draw modality, conditions and citations from the served artefacts only. You own a claim type when the prompt marks it owned; for a claim type marked consulted you may report your department's position but the modality you emit should be fact unless your own material genuinely obliges the organisation. Answer with JSON matching the schema and nothing else.",
+ "schema": {
+  "claims": [
+   {
+    "claim_type": "one of the claim types you were asked about",
+    "subject": "one of the subjects raised by the situation",
+    "modality": "must | must_not | should | should_not | may | fact",
+    "conditions": [
+     "condition terms taken from the artefact you rely on"
+    ],
+    "citations": [
+     "artefact ids from the served context"
+    ],
+    "confidence": "number between 0 and 1"
+   }
+  ]
+ },
+ "note": "the quarter is the date at which the question is asked; an artefact whose effective window does not contain it has been superseded",
+ "batches": [
+  {
+   "batch_id": "S0053-HR",
+   "scenario_id": "S0053",
+   "department": "HR",
+   "quarter": 10,
+   "situation": "evidence training requirement complete security training access provisioning grant remote access service continuity the issue shared credential grant admin rights deploy outside window maintain hot standby procedure practice local",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_admin_rights",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "training_requirement",
+     "role": "owned",
+     "subjects": [
+      "complete_security_training"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00410",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00416",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00417",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00408",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00407",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00415",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must_not",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00414",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00409",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00188",
+     "cls": "policy",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00411",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0053-OPS",
+   "scenario_id": "S0053",
+   "department": "OPS",
+   "quarter": 10,
+   "situation": "evidence training requirement complete security training access provisioning grant remote access service continuity the issue shared credential grant admin rights deploy outside window maintain hot standby procedure practice local",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_admin_rights",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "owned",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_remote_access",
+      "issue_shared_credential",
+      "maintain_hot_standby"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00393",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00391",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "asset_is_classified"
+     ]
+    },
+    {
+     "artefact_id": "A00392",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "volume_is_high"
+     ]
+    },
+    {
+     "artefact_id": "A00405",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00394",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00396",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00403",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00397",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00395",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00382",
+     "cls": "policy",
+     "policy_family": "OPS-CNT",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must_not",
+     "conditions": [
+      "system_is_production"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0053-SEC",
+   "scenario_id": "S0053",
+   "department": "SEC",
+   "quarter": 10,
+   "situation": "evidence training requirement complete security training access provisioning grant remote access service continuity the issue shared credential grant admin rights deploy outside window maintain hot standby procedure practice local",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "owned",
+     "subjects": [
+      "complete_security_training",
+      "grant_admin_rights",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "consulted",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_remote_access",
+      "issue_shared_credential",
+      "maintain_hot_standby"
+     ]
+    },
+    {
+     "claim_type": "training_requirement",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00679",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00674",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00675",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00680",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "supplier_is_sole_source"
+     ]
+    },
+    {
+     "artefact_id": "A00673",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "change_is_emergency",
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00657",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00237",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00228",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00677",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00233",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0330-FIN",
+   "scenario_id": "S0330",
+   "department": "FIN",
+   "quarter": 13,
+   "situation": "evidence notify regulator unit local screen counterparty for sanctions screening applies escalate to committee obtain two approvals budget approval",
+   "subjects_raised": [
+    "escalate_to_committee",
+    "notify_regulator",
+    "obtain_two_approvals",
+    "screen_counterparty"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "budget_approval",
+     "role": "owned",
+     "subjects": [
+      "escalate_to_committee",
+      "obtain_two_approvals"
+     ]
+    },
+    {
+     "claim_type": "sanctions_screening",
+     "role": "consulted",
+     "subjects": [
+      "notify_regulator",
+      "screen_counterparty"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00620",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00618",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "may",
+     "conditions": [
+      "counterparty_is_new"
+     ]
+    },
+    {
+     "artefact_id": "A00622",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00619",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "should",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00621",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "may",
+     "conditions": [
+      "supplier_is_sole_source"
+     ]
+    },
+    {
+     "artefact_id": "A00065",
+     "cls": "policy",
+     "policy_family": "FIN-BUD",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "should",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00803",
+     "cls": "precedent",
+     "policy_family": "FIN-BUD",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "should",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00978",
+     "cls": "precedent",
+     "policy_family": "FIN-BUD",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "should",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00074",
+     "cls": "policy",
+     "policy_family": "FIN-BUD",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00062",
+     "cls": "policy",
+     "policy_family": "FIN-BUD",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "should",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0330-LEG",
+   "scenario_id": "S0330",
+   "department": "LEG",
+   "quarter": 13,
+   "situation": "evidence notify regulator unit local screen counterparty for sanctions screening applies escalate to committee obtain two approvals budget approval",
+   "subjects_raised": [
+    "escalate_to_committee",
+    "notify_regulator",
+    "obtain_two_approvals",
+    "screen_counterparty"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "sanctions_screening",
+     "role": "owned",
+     "subjects": [
+      "notify_regulator",
+      "screen_counterparty"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00170",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00157",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00160",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must_not",
+     "conditions": [
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00159",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "may",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00915",
+     "cls": "precedent",
+     "policy_family": "LEG-SAN",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00168",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A01062",
+     "cls": "precedent",
+     "policy_family": "LEG-SAN",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "sanctions_screening",
+     "subject": "notify_regulator",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00924",
+     "cls": "precedent",
+     "policy_family": "LEG-SAN",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must_not",
+     "conditions": [
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00158",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must_not",
+     "conditions": [
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00162",
+     "cls": "policy",
+     "policy_family": "LEG-SAN",
+     "policy_version": 3,
+     "effective_from": 6,
+     "effective_to": 8,
+     "claim_type": "sanctions_screening",
+     "subject": "screen_counterparty",
+     "modality": "must_not",
+     "conditions": [
+      "incident_is_material"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0330-OPS",
+   "scenario_id": "S0330",
+   "department": "OPS",
+   "quarter": 13,
+   "situation": "evidence notify regulator unit local screen counterparty for sanctions screening applies escalate to committee obtain two approvals budget approval",
+   "subjects_raised": [
+    "escalate_to_committee",
+    "notify_regulator",
+    "obtain_two_approvals",
+    "screen_counterparty"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "budget_approval",
+     "role": "consulted",
+     "subjects": [
+      "escalate_to_committee",
+      "obtain_two_approvals"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00457",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00454",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00446",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "budget_approval",
+     "subject": "escalate_to_committee",
+     "modality": "should_not",
+     "conditions": [
+      "counterparty_is_new"
+     ]
+    },
+    {
+     "artefact_id": "A00455",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00456",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": [
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00448",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "budget_approval",
+     "subject": "escalate_to_committee",
+     "modality": "must_not",
+     "conditions": [
+      "counterparty_is_new",
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00447",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "budget_approval",
+     "subject": "escalate_to_committee",
+     "modality": "must_not",
+     "conditions": [
+      "asset_is_classified",
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00449",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "budget_approval",
+     "subject": "escalate_to_committee",
+     "modality": "must_not",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00452",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "budget_approval",
+     "subject": "exceed_threshold_spend",
+     "modality": "should",
+     "conditions": [
+      "counterparty_is_new",
+      "project_is_regulated"
+     ]
+    },
+    {
+     "artefact_id": "A00453",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "budget_approval",
+     "subject": "exceed_threshold_spend",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "staff_is_remote"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0207-FIN",
+   "scenario_id": "S0207",
+   "department": "FIN",
+   "quarter": 6,
+   "situation": "accept partial delivery grant remote access complete security training records schedule night shift for retains local access provisioning service continuity delivery acceptance procedure",
+   "subjects_raised": [
+    "accept_partial_delivery",
+    "complete_security_training",
+    "grant_remote_access",
+    "schedule_night_shift"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "delivery_acceptance",
+     "role": "consulted",
+     "subjects": [
+      "accept_partial_delivery"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00597",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "liability_cap",
+     "subject": "accept_unlimited_indemnity",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged",
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00058",
+     "cls": "policy",
+     "policy_family": "FIN-PAY",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "invoice_processing",
+     "subject": "prepay_invoice",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00596",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "liability_cap",
+     "subject": "accept_unlimited_indemnity",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A01081",
+     "cls": "precedent",
+     "policy_family": "FIN-PAY",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "invoice_processing",
+     "subject": "prepay_invoice",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00042",
+     "cls": "policy",
+     "policy_family": "FIN-PAY",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "payment_terms",
+     "subject": "invoice_in_local_currency",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00030",
+     "cls": "policy",
+     "policy_family": "FIN-PAY",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "payment_terms",
+     "subject": "invoice_in_local_currency",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00849",
+     "cls": "precedent",
+     "policy_family": "FIN-PAY",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "payment_terms",
+     "subject": "invoice_in_local_currency",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00557",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": [
+      "currency_is_foreign",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00020",
+     "cls": "definition",
+     "policy_family": "FIN-DEF",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": null,
+     "claim_type": null,
+     "subject": null,
+     "modality": "fact",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00696",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0207-HR",
+   "scenario_id": "S0207",
+   "department": "HR",
+   "quarter": 6,
+   "situation": "accept partial delivery grant remote access complete security training records schedule night shift for retains local access provisioning service continuity delivery acceptance procedure",
+   "subjects_raised": [
+    "accept_partial_delivery",
+    "complete_security_training",
+    "grant_remote_access",
+    "schedule_night_shift"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_remote_access"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00414",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00411",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00413",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00412",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": [
+      "asset_is_classified",
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00415",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must_not",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00408",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00417",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00418",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00407",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00409",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0207-OPS",
+   "scenario_id": "S0207",
+   "department": "OPS",
+   "quarter": 6,
+   "situation": "accept partial delivery grant remote access complete security training records schedule night shift for retains local access provisioning service continuity delivery acceptance procedure",
+   "subjects_raised": [
+    "accept_partial_delivery",
+    "complete_security_training",
+    "grant_remote_access",
+    "schedule_night_shift"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_remote_access"
+     ]
+    },
+    {
+     "claim_type": "delivery_acceptance",
+     "role": "owned",
+     "subjects": [
+      "accept_partial_delivery"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "owned",
+     "subjects": [
+      "grant_remote_access",
+      "schedule_night_shift"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00367",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00359",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00363",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00355",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A01040",
+     "cls": "precedent",
+     "policy_family": "OPS-DEL",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A01054",
+     "cls": "precedent",
+     "policy_family": "OPS-DEL",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00916",
+     "cls": "precedent",
+     "policy_family": "OPS-DEL",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A01012",
+     "cls": "precedent",
+     "policy_family": "OPS-DEL",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "delivery_acceptance",
+     "subject": "accept_partial_delivery",
+     "modality": "should_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00393",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00392",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "volume_is_high"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0207-SEC",
+   "scenario_id": "S0207",
+   "department": "SEC",
+   "quarter": 6,
+   "situation": "accept partial delivery grant remote access complete security training records schedule night shift for retains local access provisioning service continuity delivery acceptance procedure",
+   "subjects_raised": [
+    "accept_partial_delivery",
+    "complete_security_training",
+    "grant_remote_access",
+    "schedule_night_shift"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "owned",
+     "subjects": [
+      "complete_security_training",
+      "grant_remote_access"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "consulted",
+     "subjects": [
+      "grant_remote_access",
+      "schedule_night_shift"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00665",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00663",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00666",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00672",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00667",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00671",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00642",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00237",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00669",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00668",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "service_continuity",
+     "subject": "schedule_night_shift",
+     "modality": "should_not",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0378-FIN",
+   "scenario_id": "S0378",
+   "department": "FIN",
+   "quarter": 6,
+   "situation": "local supersedes onboard single source vendor onboarding obtain two approvals and screen counterparty records unit budget approval",
+   "subjects_raised": [
+    "obtain_two_approvals",
+    "onboard_single_source",
+    "screen_counterparty"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "budget_approval",
+     "role": "owned",
+     "subjects": [
+      "obtain_two_approvals"
+     ]
+    },
+    {
+     "claim_type": "vendor_onboarding",
+     "role": "consulted",
+     "subjects": [
+      "obtain_two_approvals",
+      "onboard_single_source",
+      "screen_counterparty"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00697",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "may",
+     "conditions": [
+      "counterparty_is_new",
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00696",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00695",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00694",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00693",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00692",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "vendor_onboarding",
+     "subject": "obtain_two_approvals",
+     "modality": "may",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00688",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "vendor_onboarding",
+     "subject": "obtain_two_approvals",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00705",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "vendor_onboarding",
+     "subject": "screen_counterparty",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00689",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "vendor_onboarding",
+     "subject": "obtain_two_approvals",
+     "modality": "should",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00703",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "vendor_onboarding",
+     "subject": "screen_counterparty",
+     "modality": "may",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0378-OPS",
+   "scenario_id": "S0378",
+   "department": "OPS",
+   "quarter": 6,
+   "situation": "local supersedes onboard single source vendor onboarding obtain two approvals and screen counterparty records unit budget approval",
+   "subjects_raised": [
+    "obtain_two_approvals",
+    "onboard_single_source",
+    "screen_counterparty"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "budget_approval",
+     "role": "consulted",
+     "subjects": [
+      "obtain_two_approvals"
+     ]
+    },
+    {
+     "claim_type": "vendor_onboarding",
+     "role": "owned",
+     "subjects": [
+      "obtain_two_approvals",
+      "onboard_single_source",
+      "screen_counterparty"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00455",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00456",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": [
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00454",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00457",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "budget_approval",
+     "subject": "obtain_two_approvals",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00334",
+     "cls": "policy",
+     "policy_family": "OPS-VND",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00346",
+     "cls": "policy",
+     "policy_family": "OPS-VND",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00446",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "budget_approval",
+     "subject": "escalate_to_committee",
+     "modality": "should_not",
+     "conditions": [
+      "counterparty_is_new"
+     ]
+    },
+    {
+     "artefact_id": "A00840",
+     "cls": "precedent",
+     "policy_family": "OPS-VND",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00345",
+     "cls": "policy",
+     "policy_family": "OPS-VND",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_onboarding",
+     "subject": "obtain_two_approvals",
+     "modality": "must_not",
+     "conditions": [
+      "engagement_is_short"
+     ]
+    },
+    {
+     "artefact_id": "A00805",
+     "cls": "precedent",
+     "policy_family": "OPS-VND",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "may",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0378-SEC",
+   "scenario_id": "S0378",
+   "department": "SEC",
+   "quarter": 6,
+   "situation": "local supersedes onboard single source vendor onboarding obtain two approvals and screen counterparty records unit budget approval",
+   "subjects_raised": [
+    "obtain_two_approvals",
+    "onboard_single_source",
+    "screen_counterparty"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "vendor_onboarding",
+     "role": "consulted",
+     "subjects": [
+      "obtain_two_approvals",
+      "onboard_single_source",
+      "screen_counterparty"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00713",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00712",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "supplier_is_sole_source"
+     ]
+    },
+    {
+     "artefact_id": "A00714",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00716",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00711",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00709",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00710",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00717",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00708",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "vendor_onboarding",
+     "subject": "onboard_single_source",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00732",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "vendor_onboarding",
+     "subject": "screen_counterparty",
+     "modality": "must",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0299-HR",
+   "scenario_id": "S0299",
+   "department": "HR",
+   "quarter": 18,
+   "situation": "access provisioning procedure local applies grant remote access service continuity maintain hot standby issue shared credential complete security training for and grant admin rights deploy outside window",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_admin_rights",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00415",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must_not",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00416",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00408",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00411",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00414",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00409",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00417",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00407",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00410",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00418",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0299-OPS",
+   "scenario_id": "S0299",
+   "department": "OPS",
+   "quarter": 18,
+   "situation": "access provisioning procedure local applies grant remote access service continuity maintain hot standby issue shared credential complete security training for and grant admin rights deploy outside window",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_admin_rights",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "owned",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_remote_access",
+      "issue_shared_credential",
+      "maintain_hot_standby"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00396",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00393",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00391",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "asset_is_classified"
+     ]
+    },
+    {
+     "artefact_id": "A00395",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00397",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00404",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00387",
+     "cls": "policy",
+     "policy_family": "OPS-CNT",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must_not",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00406",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00403",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00398",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0299-SEC",
+   "scenario_id": "S0299",
+   "department": "SEC",
+   "quarter": 18,
+   "situation": "access provisioning procedure local applies grant remote access service continuity maintain hot standby issue shared credential complete security training for and grant admin rights deploy outside window",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "owned",
+     "subjects": [
+      "complete_security_training",
+      "grant_admin_rights",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "consulted",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_remote_access",
+      "issue_shared_credential",
+      "maintain_hot_standby"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00661",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00634",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must_not",
+     "conditions": [
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00657",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00660",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00654",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00659",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "counterparty_is_new"
+     ]
+    },
+    {
+     "artefact_id": "A00662",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00242",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00221",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should",
+     "conditions": [
+      "service_is_critical",
+      "supplier_is_sole_source"
+     ]
+    },
+    {
+     "artefact_id": "A00214",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should_not",
+     "conditions": [
+      "currency_is_foreign"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0242-FIN",
+   "scenario_id": "S0242",
+   "department": "FIN",
+   "quarter": 8,
+   "situation": "the service continuity extend probation supersedes decision employment status deploy outside window access provisioning maintain hot standby retains grant admin rights grant remote access unit",
+   "subjects_raised": [
+    "deploy_outside_window",
+    "extend_probation",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "employment_status",
+     "role": "consulted",
+     "subjects": [
+      "extend_probation"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00557",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": [
+      "currency_is_foreign",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00553",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00556",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": [
+      "contract_value_high",
+      "supplier_is_sole_source"
+     ]
+    },
+    {
+     "artefact_id": "A00554",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00555",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should_not",
+     "conditions": [
+      "currency_is_foreign"
+     ]
+    },
+    {
+     "artefact_id": "A00042",
+     "cls": "policy",
+     "policy_family": "FIN-PAY",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "payment_terms",
+     "subject": "invoice_in_local_currency",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00704",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "vendor_onboarding",
+     "subject": "screen_counterparty",
+     "modality": "may",
+     "conditions": [
+      "access_is_privileged",
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00597",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "liability_cap",
+     "subject": "accept_unlimited_indemnity",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged",
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00849",
+     "cls": "precedent",
+     "policy_family": "FIN-PAY",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "payment_terms",
+     "subject": "invoice_in_local_currency",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00020",
+     "cls": "definition",
+     "policy_family": "FIN-DEF",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": null,
+     "claim_type": null,
+     "subject": null,
+     "modality": "fact",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0242-HR",
+   "scenario_id": "S0242",
+   "department": "HR",
+   "quarter": 8,
+   "situation": "the service continuity extend probation supersedes decision employment status deploy outside window access provisioning maintain hot standby retains grant admin rights grant remote access unit",
+   "subjects_raised": [
+    "deploy_outside_window",
+    "extend_probation",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "grant_admin_rights",
+      "grant_remote_access"
+     ]
+    },
+    {
+     "claim_type": "employment_status",
+     "role": "owned",
+     "subjects": [
+      "extend_probation"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00408",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00407",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00410",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00414",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00411",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00409",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00413",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00412",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": [
+      "asset_is_classified",
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00417",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00181",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0242-LEG",
+   "scenario_id": "S0242",
+   "department": "LEG",
+   "quarter": 8,
+   "situation": "the service continuity extend probation supersedes decision employment status deploy outside window access provisioning maintain hot standby retains grant admin rights grant remote access unit",
+   "subjects_raised": [
+    "deploy_outside_window",
+    "extend_probation",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "employment_status",
+     "role": "consulted",
+     "subjects": [
+      "extend_probation"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00547",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00552",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should",
+     "conditions": [
+      "staff_is_remote",
+      "volume_is_high"
+     ]
+    },
+    {
+     "artefact_id": "A00549",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 4,
+     "effective_from": 9,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00548",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 3,
+     "effective_from": 6,
+     "effective_to": 8,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00551",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00546",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00550",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 5,
+     "effective_from": 12,
+     "effective_to": 14,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00540",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00544",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00545",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0242-OPS",
+   "scenario_id": "S0242",
+   "department": "OPS",
+   "quarter": 8,
+   "situation": "the service continuity extend probation supersedes decision employment status deploy outside window access provisioning maintain hot standby retains grant admin rights grant remote access unit",
+   "subjects_raised": [
+    "deploy_outside_window",
+    "extend_probation",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "grant_admin_rights",
+      "grant_remote_access"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "owned",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_remote_access",
+      "maintain_hot_standby"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00398",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00395",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00397",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00396",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00387",
+     "cls": "policy",
+     "policy_family": "OPS-CNT",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must_not",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00402",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "must",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00399",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "must",
+     "conditions": [
+      "engagement_is_short"
+     ]
+    },
+    {
+     "artefact_id": "A00887",
+     "cls": "precedent",
+     "policy_family": "OPS-CNT",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must_not",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A01057",
+     "cls": "precedent",
+     "policy_family": "OPS-CNT",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must_not",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00389",
+     "cls": "policy",
+     "policy_family": "OPS-CNT",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "data_is_personal"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0242-SEC",
+   "scenario_id": "S0242",
+   "department": "SEC",
+   "quarter": 8,
+   "situation": "the service continuity extend probation supersedes decision employment status deploy outside window access provisioning maintain hot standby retains grant admin rights grant remote access unit",
+   "subjects_raised": [
+    "deploy_outside_window",
+    "extend_probation",
+    "grant_admin_rights",
+    "grant_remote_access",
+    "maintain_hot_standby"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "owned",
+     "subjects": [
+      "grant_admin_rights",
+      "grant_remote_access"
+     ]
+    },
+    {
+     "claim_type": "service_continuity",
+     "role": "consulted",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_remote_access",
+      "maintain_hot_standby"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00657",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00641",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "may",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00659",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "counterparty_is_new"
+     ]
+    },
+    {
+     "artefact_id": "A00642",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00640",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "may",
+     "conditions": [
+      "currency_is_foreign",
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00242",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00245",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00656",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": [
+      "payment_is_recurring"
+     ]
+    },
+    {
+     "artefact_id": "A00636",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "service_continuity",
+     "subject": "grant_remote_access",
+     "modality": "must",
+     "conditions": [
+      "incident_is_material",
+      "project_is_regulated"
+     ]
+    },
+    {
+     "artefact_id": "A00654",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "service_continuity",
+     "subject": "maintain_hot_standby",
+     "modality": "must",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0098-FIN",
+   "scenario_id": "S0098",
+   "department": "FIN",
+   "quarter": 7,
+   "situation": "supporting access provisioning responsible issue shared credential supersedes complete security training expense eligibility grant remote access practice change window decision run penetration test deploy outside window training requirement",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "expense_eligibility",
+     "role": "owned",
+     "subjects": []
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00079",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00962",
+     "cls": "precedent",
+     "policy_family": "FIN-EXP",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A01043",
+     "cls": "precedent",
+     "policy_family": "FIN-EXP",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00075",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should_not",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00076",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should_not",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00077",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should_not",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00078",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00981",
+     "cls": "precedent",
+     "policy_family": "FIN-EXP",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00554",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00597",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "liability_cap",
+     "subject": "accept_unlimited_indemnity",
+     "modality": "should",
+     "conditions": [
+      "access_is_privileged",
+      "vendor_is_offshore"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0098-HR",
+   "scenario_id": "S0098",
+   "department": "HR",
+   "quarter": 7,
+   "situation": "supporting access provisioning responsible issue shared credential supersedes complete security training expense eligibility grant remote access practice change window decision run penetration test deploy outside window training requirement",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "expense_eligibility",
+     "role": "consulted",
+     "subjects": []
+    },
+    {
+     "claim_type": "training_requirement",
+     "role": "owned",
+     "subjects": [
+      "complete_security_training"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00416",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00418",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00417",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00188",
+     "cls": "policy",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00415",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must_not",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00411",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00414",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00823",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00843",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00947",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "should",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0098-OPS",
+   "scenario_id": "S0098",
+   "department": "OPS",
+   "quarter": 7,
+   "situation": "supporting access provisioning responsible issue shared credential supersedes complete security training expense eligibility grant remote access practice change window decision run penetration test deploy outside window training requirement",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "change_window",
+     "role": "owned",
+     "subjects": [
+      "deploy_outside_window",
+      "run_penetration_test"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00393",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00392",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "volume_is_high"
+     ]
+    },
+    {
+     "artefact_id": "A00391",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "asset_is_classified"
+     ]
+    },
+    {
+     "artefact_id": "A00394",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00401",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "must",
+     "conditions": [
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00406",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00403",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00405",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00368",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00404",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "should",
+     "conditions": [
+      "system_is_production"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0098-SEC",
+   "scenario_id": "S0098",
+   "department": "SEC",
+   "quarter": 7,
+   "situation": "supporting access provisioning responsible issue shared credential supersedes complete security training expense eligibility grant remote access practice change window decision run penetration test deploy outside window training requirement",
+   "subjects_raised": [
+    "complete_security_training",
+    "deploy_outside_window",
+    "grant_remote_access",
+    "issue_shared_credential",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "access_provisioning",
+     "role": "owned",
+     "subjects": [
+      "complete_security_training",
+      "grant_remote_access",
+      "issue_shared_credential"
+     ]
+    },
+    {
+     "claim_type": "change_window",
+     "role": "consulted",
+     "subjects": [
+      "deploy_outside_window",
+      "run_penetration_test"
+     ]
+    },
+    {
+     "claim_type": "training_requirement",
+     "role": "consulted",
+     "subjects": [
+      "complete_security_training"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00675",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00462",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00463",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00682",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must_not",
+     "conditions": [
+      "supplier_is_sole_source"
+     ]
+    },
+    {
+     "artefact_id": "A00673",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "change_is_emergency",
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00465",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00461",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00676",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "training_requirement",
+     "subject": "complete_security_training",
+     "modality": "must",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00458",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00460",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "asset_is_classified"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0315-HR",
+   "scenario_id": "S0315",
+   "department": "HR",
+   "quarter": 6,
+   "situation": "store data offshore working time device control data classification for allow personal device subsequent retain records seven years supporting local the training requirement",
+   "subjects_raised": [
+    "allow_personal_device",
+    "retain_records_seven_years",
+    "store_data_offshore"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "training_requirement",
+     "role": "owned",
+     "subjects": []
+    },
+    {
+     "claim_type": "working_time",
+     "role": "owned",
+     "subjects": [
+      "allow_personal_device"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00183",
+     "cls": "policy",
+     "policy_family": "HR-TIM",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must_not",
+     "conditions": [
+      "asset_is_classified",
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00776",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must_not",
+     "conditions": [
+      "asset_is_classified",
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00869",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must_not",
+     "conditions": [
+      "asset_is_classified",
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00192",
+     "cls": "policy",
+     "policy_family": "HR-TIM",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A00189",
+     "cls": "policy",
+     "policy_family": "HR-TIM",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A00186",
+     "cls": "policy",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "asset_is_classified",
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00832",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A01052",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A01053",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A00786",
+     "cls": "precedent",
+     "policy_family": "HR-TIM",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": [
+      "asset_is_classified",
+      "change_is_emergency"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0315-LEG",
+   "scenario_id": "S0315",
+   "department": "LEG",
+   "quarter": 6,
+   "situation": "store data offshore working time device control data classification for allow personal device subsequent retain records seven years supporting local the training requirement",
+   "subjects_raised": [
+    "allow_personal_device",
+    "retain_records_seven_years",
+    "store_data_offshore"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "data_classification",
+     "role": "consulted",
+     "subjects": [
+      "retain_records_seven_years",
+      "store_data_offshore"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00500",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00495",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00497",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 3,
+     "effective_from": 6,
+     "effective_to": 8,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": [
+      "data_is_personal",
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00496",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00498",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 4,
+     "effective_from": 9,
+     "effective_to": 11,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00501",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00499",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 5,
+     "effective_from": 12,
+     "effective_to": 14,
+     "claim_type": "data_classification",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": [
+      "contract_value_high",
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00504",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 3,
+     "effective_from": 6,
+     "effective_to": 8,
+     "claim_type": "data_classification",
+     "subject": "store_data_offshore",
+     "modality": "must_not",
+     "conditions": [
+      "change_is_emergency",
+      "currency_is_foreign"
+     ]
+    },
+    {
+     "artefact_id": "A00502",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "data_classification",
+     "subject": "store_data_offshore",
+     "modality": "must_not",
+     "conditions": [
+      "engagement_is_short"
+     ]
+    },
+    {
+     "artefact_id": "A00505",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 4,
+     "effective_from": 9,
+     "effective_to": 11,
+     "claim_type": "data_classification",
+     "subject": "store_data_offshore",
+     "modality": "must_not",
+     "conditions": [
+      "counterparty_is_new"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0315-OPS",
+   "scenario_id": "S0315",
+   "department": "OPS",
+   "quarter": 6,
+   "situation": "store data offshore working time device control data classification for allow personal device subsequent retain records seven years supporting local the training requirement",
+   "subjects_raised": [
+    "allow_personal_device",
+    "retain_records_seven_years",
+    "store_data_offshore"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "device_control",
+     "role": "consulted",
+     "subjects": [
+      "allow_personal_device"
+     ]
+    },
+    {
+     "claim_type": "working_time",
+     "role": "consulted",
+     "subjects": [
+      "allow_personal_device"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00753",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00752",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00750",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": [
+      "asset_is_classified",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00751",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "working_time",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": [
+      "term_exceeds_year",
+      "volume_is_high"
+     ]
+    },
+    {
+     "artefact_id": "A00755",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "working_time",
+     "subject": "schedule_night_shift",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00756",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "working_time",
+     "subject": "schedule_night_shift",
+     "modality": "must_not",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00593",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "invoice_processing",
+     "subject": "retain_records_seven_years",
+     "modality": "should",
+     "conditions": [
+      "service_is_critical",
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00754",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "working_time",
+     "subject": "schedule_night_shift",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00591",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "invoice_processing",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": [
+      "counterparty_is_new",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00592",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "invoice_processing",
+     "subject": "retain_records_seven_years",
+     "modality": "may",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0315-SEC",
+   "scenario_id": "S0315",
+   "department": "SEC",
+   "quarter": 6,
+   "situation": "store data offshore working time device control data classification for allow personal device subsequent retain records seven years supporting local the training requirement",
+   "subjects_raised": [
+    "allow_personal_device",
+    "retain_records_seven_years",
+    "store_data_offshore"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "data_classification",
+     "role": "owned",
+     "subjects": [
+      "retain_records_seven_years",
+      "store_data_offshore"
+     ]
+    },
+    {
+     "claim_type": "device_control",
+     "role": "owned",
+     "subjects": [
+      "allow_personal_device"
+     ]
+    },
+    {
+     "claim_type": "training_requirement",
+     "role": "consulted",
+     "subjects": []
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00212",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": [
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00207",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00217",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should_not",
+     "conditions": [
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00227",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00232",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00222",
+     "cls": "policy",
+     "policy_family": "SEC-ACC",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A01035",
+     "cls": "precedent",
+     "policy_family": "SEC-ACC",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "must",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00977",
+     "cls": "precedent",
+     "policy_family": "SEC-ACC",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00902",
+     "cls": "precedent",
+     "policy_family": "SEC-ACC",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00979",
+     "cls": "precedent",
+     "policy_family": "SEC-ACC",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "device_control",
+     "subject": "allow_personal_device",
+     "modality": "should_not",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0216-HR",
+   "scenario_id": "S0216",
+   "department": "HR",
+   "quarter": 4,
+   "situation": "change window responsible ip assignment retains grant admin rights for assign ip to company vendor security review run penetration test the supersedes deploy outside window",
+   "subjects_raised": [
+    "assign_ip_to_company",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "ip_assignment",
+     "role": "consulted",
+     "subjects": [
+      "assign_ip_to_company"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00408",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00410",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00409",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "counterparty_is_new",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00407",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_admin_rights",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "staff_is_remote"
+     ]
+    },
+    {
+     "artefact_id": "A00002",
+     "cls": "definition",
+     "policy_family": "HR-DEF",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": null,
+     "claim_type": null,
+     "subject": null,
+     "modality": "fact",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00181",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00414",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00413",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00417",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "access_provisioning",
+     "subject": "issue_shared_credential",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00411",
+     "cls": "position",
+     "policy_family": "HR-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "access_provisioning",
+     "subject": "grant_remote_access",
+     "modality": "should_not",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0216-LEG",
+   "scenario_id": "S0216",
+   "department": "LEG",
+   "quarter": 4,
+   "situation": "change window responsible ip assignment retains grant admin rights for assign ip to company vendor security review run penetration test the supersedes deploy outside window",
+   "subjects_raised": [
+    "assign_ip_to_company",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "ip_assignment",
+     "role": "owned",
+     "subjects": [
+      "assign_ip_to_company"
+     ]
+    },
+    {
+     "claim_type": "vendor_security_review",
+     "role": "consulted",
+     "subjects": [
+      "run_penetration_test"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00119",
+     "cls": "policy",
+     "policy_family": "LEG-CON",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00104",
+     "cls": "policy",
+     "policy_family": "LEG-CON",
+     "policy_version": 3,
+     "effective_from": 6,
+     "effective_to": 8,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00804",
+     "cls": "precedent",
+     "policy_family": "LEG-CON",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00109",
+     "cls": "policy",
+     "policy_family": "LEG-CON",
+     "policy_version": 4,
+     "effective_from": 9,
+     "effective_to": 11,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00099",
+     "cls": "policy",
+     "policy_family": "LEG-CON",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00124",
+     "cls": "policy",
+     "policy_family": "LEG-CON",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00094",
+     "cls": "policy",
+     "policy_family": "LEG-CON",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00799",
+     "cls": "precedent",
+     "policy_family": "LEG-CON",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A01065",
+     "cls": "precedent",
+     "policy_family": "LEG-CON",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A01000",
+     "cls": "precedent",
+     "policy_family": "LEG-CON",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "ip_assignment",
+     "subject": "assign_ip_to_company",
+     "modality": "must",
+     "conditions": [
+      "access_is_privileged",
+      "worker_is_contractor"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0216-OPS",
+   "scenario_id": "S0216",
+   "department": "OPS",
+   "quarter": 4,
+   "situation": "change window responsible ip assignment retains grant admin rights for assign ip to company vendor security review run penetration test the supersedes deploy outside window",
+   "subjects_raised": [
+    "assign_ip_to_company",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "change_window",
+     "role": "owned",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_admin_rights",
+      "run_penetration_test"
+     ]
+    },
+    {
+     "claim_type": "vendor_security_review",
+     "role": "consulted",
+     "subjects": [
+      "run_penetration_test"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00744",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00368",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00361",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "change_window",
+     "subject": "grant_admin_rights",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged",
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00370",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "change_window",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00364",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00360",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "should",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00362",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "change_window",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00358",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "change_window",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00366",
+     "cls": "policy",
+     "policy_family": "OPS-DEL",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "change_window",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00742",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0216-SEC",
+   "scenario_id": "S0216",
+   "department": "SEC",
+   "quarter": 4,
+   "situation": "change window responsible ip assignment retains grant admin rights for assign ip to company vendor security review run penetration test the supersedes deploy outside window",
+   "subjects_raised": [
+    "assign_ip_to_company",
+    "deploy_outside_window",
+    "grant_admin_rights",
+    "run_penetration_test"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "change_window",
+     "role": "consulted",
+     "subjects": [
+      "deploy_outside_window",
+      "grant_admin_rights",
+      "run_penetration_test"
+     ]
+    },
+    {
+     "claim_type": "vendor_security_review",
+     "role": "owned",
+     "subjects": [
+      "run_penetration_test"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00463",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00466",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 9,
+     "effective_from": 16,
+     "effective_to": 17,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "may",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00470",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "change_window",
+     "subject": "grant_admin_rights",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00465",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00477",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "change_window",
+     "subject": "grant_admin_rights",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00467",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 10,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "may",
+     "conditions": [
+      "service_is_critical"
+     ]
+    },
+    {
+     "artefact_id": "A00461",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00474",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 7,
+     "effective_from": 12,
+     "effective_to": 13,
+     "claim_type": "change_window",
+     "subject": "grant_admin_rights",
+     "modality": "should_not",
+     "conditions": [
+      "system_is_production"
+     ]
+    },
+    {
+     "artefact_id": "A00473",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "change_window",
+     "subject": "grant_admin_rights",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00458",
+     "cls": "position",
+     "policy_family": "SEC-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "change_window",
+     "subject": "deploy_outside_window",
+     "modality": "must",
+     "conditions": [
+      "service_is_critical"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0346-FIN",
+   "scenario_id": "S0346",
+   "department": "FIN",
+   "quarter": 17,
+   "situation": "wide run penetration test share data with vendor vendor security review classify as contractor expense eligibility procedure and responsible employment status supporting",
+   "subjects_raised": [
+    "classify_as_contractor",
+    "run_penetration_test",
+    "share_data_with_vendor"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "employment_status",
+     "role": "consulted",
+     "subjects": [
+      "classify_as_contractor"
+     ]
+    },
+    {
+     "claim_type": "expense_eligibility",
+     "role": "owned",
+     "subjects": []
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00079",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00075",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should_not",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00962",
+     "cls": "precedent",
+     "policy_family": "FIN-EXP",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A01043",
+     "cls": "precedent",
+     "policy_family": "FIN-EXP",
+     "policy_version": 5,
+     "effective_from": 16,
+     "effective_to": null,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00553",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 3,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00554",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "change_is_emergency"
+     ]
+    },
+    {
+     "artefact_id": "A00555",
+     "cls": "position",
+     "policy_family": "FIN-POS",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should_not",
+     "conditions": [
+      "currency_is_foreign"
+     ]
+    },
+    {
+     "artefact_id": "A00077",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 3,
+     "effective_from": 8,
+     "effective_to": 11,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should_not",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00078",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 4,
+     "effective_from": 12,
+     "effective_to": 15,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00076",
+     "cls": "policy",
+     "policy_family": "FIN-EXP",
+     "policy_version": 2,
+     "effective_from": 4,
+     "effective_to": 7,
+     "claim_type": "expense_eligibility",
+     "subject": "reimburse_travel",
+     "modality": "should_not",
+     "conditions": [
+      "incident_is_material",
+      "worker_is_contractor"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0346-HR",
+   "scenario_id": "S0346",
+   "department": "HR",
+   "quarter": 17,
+   "situation": "wide run penetration test share data with vendor vendor security review classify as contractor expense eligibility procedure and responsible employment status supporting",
+   "subjects_raised": [
+    "classify_as_contractor",
+    "run_penetration_test",
+    "share_data_with_vendor"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "employment_status",
+     "role": "owned",
+     "subjects": [
+      "classify_as_contractor"
+     ]
+    },
+    {
+     "claim_type": "expense_eligibility",
+     "role": "consulted",
+     "subjects": []
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00180",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 4,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00171",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00177",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00771",
+     "cls": "precedent",
+     "policy_family": "HR-EMP",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00860",
+     "cls": "precedent",
+     "policy_family": "HR-EMP",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00810",
+     "cls": "precedent",
+     "policy_family": "HR-EMP",
+     "policy_version": 3,
+     "effective_from": 12,
+     "effective_to": 17,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00174",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "contract_value_high",
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00172",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": [
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00175",
+     "cls": "policy",
+     "policy_family": "HR-EMP",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": [
+      "data_is_personal"
+     ]
+    },
+    {
+     "artefact_id": "A00939",
+     "cls": "precedent",
+     "policy_family": "HR-EMP",
+     "policy_version": 2,
+     "effective_from": 6,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "may",
+     "conditions": [
+      "data_is_personal"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0346-LEG",
+   "scenario_id": "S0346",
+   "department": "LEG",
+   "quarter": 17,
+   "situation": "wide run penetration test share data with vendor vendor security review classify as contractor expense eligibility procedure and responsible employment status supporting",
+   "subjects_raised": [
+    "classify_as_contractor",
+    "run_penetration_test",
+    "share_data_with_vendor"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "employment_status",
+     "role": "consulted",
+     "subjects": [
+      "classify_as_contractor"
+     ]
+    },
+    {
+     "claim_type": "vendor_security_review",
+     "role": "consulted",
+     "subjects": [
+      "run_penetration_test",
+      "share_data_with_vendor"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00544",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00541",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 3,
+     "effective_from": 6,
+     "effective_to": 8,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "renewal_is_automatic",
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A00542",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 4,
+     "effective_from": 9,
+     "effective_to": 11,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "payment_is_recurring",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00543",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 5,
+     "effective_from": 12,
+     "effective_to": 14,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "volume_is_high"
+     ]
+    },
+    {
+     "artefact_id": "A00545",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 7,
+     "effective_from": 18,
+     "effective_to": null,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00551",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 6,
+     "effective_from": 15,
+     "effective_to": 17,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "should",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    },
+    {
+     "artefact_id": "A00540",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 2,
+     "effective_from": 3,
+     "effective_to": 5,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must_not",
+     "conditions": [
+      "access_is_privileged"
+     ]
+    },
+    {
+     "artefact_id": "A00539",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "employment_status",
+     "subject": "classify_as_contractor",
+     "modality": "must_not",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A00137",
+     "cls": "policy",
+     "policy_family": "LEG-DPA",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "data_processing_terms",
+     "subject": "share_data_with_vendor",
+     "modality": "must",
+     "conditions": [
+      "asset_is_classified",
+      "currency_is_foreign"
+     ]
+    },
+    {
+     "artefact_id": "A00546",
+     "cls": "position",
+     "policy_family": "LEG-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 2,
+     "claim_type": "employment_status",
+     "subject": "extend_probation",
+     "modality": "must_not",
+     "conditions": [
+      "vendor_is_offshore"
+     ]
+    }
+   ]
+  },
+  {
+   "batch_id": "S0346-OPS",
+   "scenario_id": "S0346",
+   "department": "OPS",
+   "quarter": 17,
+   "situation": "wide run penetration test share data with vendor vendor security review classify as contractor expense eligibility procedure and responsible employment status supporting",
+   "subjects_raised": [
+    "classify_as_contractor",
+    "run_penetration_test",
+    "share_data_with_vendor"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "vendor_security_review",
+     "role": "consulted",
+     "subjects": [
+      "run_penetration_test",
+      "share_data_with_vendor"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00747",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "vendor_security_review",
+     "subject": "share_data_with_vendor",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00748",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_security_review",
+     "subject": "share_data_with_vendor",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00743",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 2,
+     "effective_from": 5,
+     "effective_to": 9,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": [
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00742",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": [
+      "term_exceeds_year"
+     ]
+    },
+    {
+     "artefact_id": "A00744",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00749",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "vendor_security_review",
+     "subject": "share_data_with_vendor",
+     "modality": "should",
+     "conditions": [
+      "incident_is_material"
+     ]
+    },
+    {
+     "artefact_id": "A00745",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 4,
+     "effective_from": 15,
+     "effective_to": null,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must",
+     "conditions": [
+      "term_exceeds_year",
+      "worker_is_contractor"
+     ]
+    },
+    {
+     "artefact_id": "A00746",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "vendor_security_review",
+     "subject": "share_data_with_vendor",
+     "modality": "should",
+     "conditions": [
+      "contract_value_high"
+     ]
+    },
+    {
+     "artefact_id": "A00740",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 3,
+     "effective_from": 10,
+     "effective_to": 14,
+     "claim_type": "vendor_security_review",
+     "subject": "include_audit_clause",
+     "modality": "must_not",
+     "conditions": [
+      "counterparty_is_new"
+     ]
+    },
+    {
+     "artefact_id": "A00738",
+     "cls": "position",
+     "policy_family": "OPS-POS",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 4,
+     "claim_type": "vendor_security_review",
+     "subject": "include_audit_clause",
+     "modality": "may",
+     "conditions": []
+    }
+   ]
+  },
+  {
+   "batch_id": "S0346-SEC",
+   "scenario_id": "S0346",
+   "department": "SEC",
+   "quarter": 17,
+   "situation": "wide run penetration test share data with vendor vendor security review classify as contractor expense eligibility procedure and responsible employment status supporting",
+   "subjects_raised": [
+    "classify_as_contractor",
+    "run_penetration_test",
+    "share_data_with_vendor"
+   ],
+   "claim_types": [
+    {
+     "claim_type": "vendor_security_review",
+     "role": "owned",
+     "subjects": [
+      "run_penetration_test",
+      "share_data_with_vendor"
+     ]
+    }
+   ],
+   "served": [
+    {
+     "artefact_id": "A00291",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 4,
+     "effective_from": 6,
+     "effective_to": 7,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00279",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 1,
+     "effective_from": 0,
+     "effective_to": 1,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00287",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 3,
+     "effective_from": 4,
+     "effective_to": 5,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00283",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00295",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00299",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 6,
+     "effective_from": 10,
+     "effective_to": 11,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must_not",
+     "conditions": [
+      "renewal_is_automatic"
+     ]
+    },
+    {
+     "artefact_id": "A00305",
+     "cls": "policy",
+     "policy_family": "SEC-VND",
+     "policy_version": 8,
+     "effective_from": 14,
+     "effective_to": 15,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "should",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00782",
+     "cls": "precedent",
+     "policy_family": "SEC-VND",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00850",
+     "cls": "precedent",
+     "policy_family": "SEC-VND",
+     "policy_version": 2,
+     "effective_from": 2,
+     "effective_to": 3,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "should_not",
+     "conditions": []
+    },
+    {
+     "artefact_id": "A00863",
+     "cls": "precedent",
+     "policy_family": "SEC-VND",
+     "policy_version": 5,
+     "effective_from": 8,
+     "effective_to": 9,
+     "claim_type": "vendor_security_review",
+     "subject": "run_penetration_test",
+     "modality": "must_not",
+     "conditions": []
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "model": "claude-opus-5",
+ "n_batches": 38,
+ "n_scenarios": 10,
+ "n_claims": 51,
+ "schema_invalid": 0,
+ "k_served_per_partition": 10,
+ "counts": {
+  "omit": {
+   "events": 0,
+   "trials": 51
+  },
+  "spurious": {
+   "events": 0,
+   "trials": 51
+  },
+  "modality": {
+   "events": 0,
+   "trials": 11
+  },
+  "stale": {
+   "events": 0,
+   "trials": 51
+  },
+  "fabricate": {
+   "events": 0,
+   "trials": 51
+  },
+  "overreach": {
+   "events": 0,
+   "trials": 40
+  }
+ },
+ "measured_rates": {
+  "omit": 0.0,
+  "spurious": 0.0,
+  "modality": 0.0,
+  "stale": 0.0,
+  "fabricate": 0.0,
+  "overreach": 0.0
+ },
+ "wilson_95": {
+  "omit": [
+   0.0,
+   0.07
+  ],
+  "spurious": [
+   0.0,
+   0.07
+  ],
+  "modality": [
+   0.0,
+   0.2588
+  ],
+  "stale": [
+   0.0,
+   0.07
+  ],
+  "fabricate": [
+   0.0,
+   0.07
+  ],
+  "overreach": [
+   -0.0,
+   0.0876
+  ]
+ },
+ "note": "rates are measured against the served context alone; ground truth was never shown to the drafting model. The drafting model and the model that built the harness are the same model, which Section V states as a threat to internal validity."
+}
