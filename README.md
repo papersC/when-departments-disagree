@@ -1,10 +1,12 @@
-# BRAIN artefact
+# When Departments Disagree: BRAIN artefact
 
-Reference implementation, corpus generator, model returns and results for
-"When Departments Disagree: A Blockchain Reconciled Multi-Agent Framework for
-Institutional Knowledge and Employee Guidance".
+Reference implementation, corpus generator, model returns and results for the paper
 
-Unzip beside `paper.tex`. Global seed 20260902.
+**When Departments Disagree: Mandate-Aware Reconciliation of Agentic AI Guidance over a Permissioned Ledger**
+
+Khaled Almi'ani, Nedal Ababneh and Camille Zufferey
+
+BRAIN stands for Blockchain Reconciled Agentic Institutional Network. All results use the global seed 20260902.
 
 ## Reproduce
 
@@ -45,3 +47,13 @@ Requires python3 with numpy-free stdlib only, plus matplotlib for figures and
 the construction of the corpus, and which are analytical. The corpus is
 synthetic, the gas figures are analytical, the contracts are unaudited, and the
 drafting model and the model that built the harness are the same model.
+
+## Earlier version
+
+`paper_preprint.tex` and `paper_preprint.pdf` hold an earlier preprint of the manuscript under its previous title.
+
+## Citation
+
+If you use this artefact, please cite:
+
+K. Almi'ani, N. Ababneh, C. Zufferey, When Departments Disagree: Mandate-Aware Reconciliation of Agentic AI Guidance over a Permissioned Ledger, manuscript submitted for publication, 2026.
